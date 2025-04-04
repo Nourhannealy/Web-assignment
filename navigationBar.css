@@ -21,6 +21,7 @@ div p{
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
+    opacity: 0.5;
   }
   .mingcute--book-6-line {
     display: inline-block;
@@ -34,6 +35,7 @@ div p{
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
+    opacity: 0.5;
   }
   .line-md--plus {
     display: inline-block;
@@ -47,6 +49,7 @@ div p{
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
+    opacity: 0.5;
   }
   .iconamoon--profile-fill {
     display: inline-block;
@@ -60,6 +63,7 @@ div p{
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
+    opacity: 0.5;
   }
 
 
