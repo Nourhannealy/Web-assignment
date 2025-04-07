@@ -74,10 +74,17 @@ nav a:hover {
   display: flex;
   justify-content: center; /* Centers the icons */
   position:fixed;
+  height: 60px;
   top:0;
   right:0;
   left:0;
   gap: 50px; /* Space between icons */
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 
