@@ -5,6 +5,12 @@ body{
 .iconamoon--profile-fill{
   background-color: rgb(8, 49, 8);
 }
+.profile {
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #013220;
+  background-image: none;
+}
+
 .Main_interface{
   margin-top: 60px ; 
  flex-direction: column;

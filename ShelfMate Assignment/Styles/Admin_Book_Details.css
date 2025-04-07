@@ -1,13 +1,17 @@
-
-
 body {
   background-color: #502C0E;
   color: white; 
   font-family: Lora, Arial; 
-  margin: 0;
-  padding: 0;
+}
+.mingcute--book-6-line{
+  background-color: rgb(8, 49, 8) ;
 }
 
+.books {
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: rgb(8, 49, 8);
+  background-image: none;
+}
 .container {
   display: flex; /* Aligns the content in a row */
   align-items: center; /* Vertically centers the content */
@@ -59,7 +63,7 @@ body {
 #Author{
   color: white;
   font-size: 15px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .about-book{

@@ -1,9 +1,11 @@
-body{
-  background-color: #502C0E;
-  font-family: Lora;
-}
+
 .line-md--plus{
   background-color: rgb(8, 49, 8);
+}
+.add {
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #013220;
+  background-image: none;
 }
 .Main_interface{
   margin-top: 60px ; 
@@ -15,8 +17,6 @@ body{
 .title_of_page{
  margin-top: 20px ; 
  font-size: 30px;
- color: white;
-
 }
 .content_screen{
  margin-top: 30px; 
