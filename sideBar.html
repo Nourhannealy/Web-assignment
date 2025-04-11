@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+   
+    <head >
+        <meta charset="UTF-8">
+        <title>ShelfMate</title>
+        <link rel="stylesheet" href="Shelfmate.css">
+        <link rel="stylesheet" href="sideBar.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+       </head>
+   
+        <body>
+         <nav class="navbar">
+             <span class="mingcute--menu"></span>
+            <a href="#">
+                <i class="mingcute--book-5-line"></i>
+                <span class="menu">Menu</span>
+              </a>
+            <form class="search-bar">
+                <input type="text" id="search-bar" placeholder="Search..." name="search">
+                <button type="submit" id="search-btn"></button>
+            </form>
+            <a href="Admin_Add_Book.html">
+                <i class="line-md--plus"></i>
+                <span class="add">Add Book</span>
+            </a>
+            <a href="Admin_Book_Details.html">
+                <i class="mingcute--book-6-line"></i>
+                <span class="books">Books</span>
+            </a>
+            <a href="Admin_Profile.html">
+                <i class="iconamoon--profile-fill"></i>
+                <span class="profile">Profile</span>
+            </a>        
+        </nav>
+
+        <br>
+        <br>
+        
+    <nav class="side-bar">
+        <!-- <div class="overlay"> -->
+        <div class="side-icon">
+            <span class="line-md--plus" type="button" onclick="Admin_Add_Book()"></span>
+            <p class="names">Home</p>
+        </div>
+        <div class="side-icon">
+
+            <span class="mingcute--book-6-line" type="button" onclick="Admin_Edit_Book()"></span>
+            <p class="names">Explore</p>
+        </div>
+        <div class="side-icon">
+            <span class="iconamoon--profile-fill"></span>
+            <p class="names">subscriptions</p>
+        </div>
+        <div class="side-icon">
+
+            <span class="iconamoon--logout"></span>
+
+            <p class="names">Originals</p>
+        </div>
+    </nav>
+        <section1 id="Used_page">
+        </section1>
+
+        <script src="Shelfmate.js" async></script>
+    </body>
+    </html>
