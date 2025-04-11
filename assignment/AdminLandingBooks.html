@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AdminLandingBooks</title>
+        <link rel="stylesheet" href="AdminLandingBooks.css">
+        <link rel="stylesheet" href="navigationBar.css">
+    </head>
+
+    <script>
+        function toggleSortMenu() {
+          const menu = document.getElementById("sortMenu");
+          menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+
+
+        function expandSearch() {
+    const container = document.getElementById("searchContainer");
+    container.classList.toggle("expanded");
+  }
+      </script>
+      
+    <body>
+
+
+        <nav class="navbar">
+            <span class="mingcute--book-5-line"></span>
+            <form class="search-bar">
+                <input type="text" id="search-bar" placeholder="Search..." name="search">
+                <button type="submit" id="search-btn"></button>
+            </form>
+            <span class="line-md--plus"></span>
+            <span class="mingcute--book-6-line"></span>
+            <span class="iconamoon--profile-fill"></span>
+            
+        </nav>
+        
+        <h1>Welcome "name" to ShelfMate</h1>
+  
+        <main>
+
+
+            <div class="top-header">
+                <h2>Available Books</h2>
+                <div class="icon-row">
+
+                  <div class="search-container" id="searchContainer">
+                    <span class="material-symbols--search" id="searchIcon" onclick="expandSearch()"></span>
+                    <input type="text" placeholder="Search..." id="searchInput" />
+                  </div>
+
+                 <div class="sort-dropdown">
+                    <span class="material-symbols--sort" onclick="toggleSortMenu()" title="Sort"></span>
+                    
+                    <div class="sort-menu" id="sortMenu">
+                      <button>Date</button>
+                      <button>ID</button>
+                    </div>
+
+                  </div>
+
+                </div>
+            </div>
+
+            <div class="book-row">
+                
+                <div class="book-container">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1574328700i/46195204.jpg" alt="The Magical Language of Others"/>
+                    <div class="book-description">
+                        <h2>
+                            The Magical Language of Others
+                        </h2>
+                        <p>E. J. Koh</p>
+                    </div>
+                </div>
+
+                <div class="book-container">
+                    <img src="https://m.media-amazon.com/images/I/81q77Q39nEL._AC_UF1000,1000_QL80_.jpg" alt="Harry Potter and the Philosopher's Stone"/>
+                    <div class="book-description">
+                    <h2>
+                        Harry Potter and the Philosopher's Stone
+                    </h2>
+                    <p>J. K. Rowling</p>
+                    </div>
+                 </div>
+
+                <div class="book-container">
+                    <img src="https://m.media-amazon.com/images/I/81-+p+G9WDL._AC_SL1500_.jpg" alt="A Good Girl's Guide to Murder"/>
+                    <div class="book-description">
+                    <h2>
+                        A Good Girl's Guide to Murder
+                    </h2>
+                    <p>Holly Jackson</p>
+                    </div>
+                </div>
+
+                <div class="book-container">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1582434073i/50771500.jpg" alt="ما رواه البحر"/>
+                    <div class="book-description">
+                    <h2>
+                        ما رواه البحر
+                    </h2>
+                    <p>ساندرا سراج</p>
+                    </div>
+                </div>
+
+                <div class="book-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBXljbqv84f7BPUWLEuoyJ3jTU8tLdp2f91w&s" alt="Things We Never Got Over"/>
+                    <div class="book-description">
+                    <h2>
+                        Things We Never Got Over
+                    </h2>
+                    <p>Lucy Score</p>
+                    </div>
+                </div>
+
+                <div class="book-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs4EEPYbDupdhm2d_x7wTPWn8oNarNvC5fFw&s" alt="It Ends with Us"/>
+                    <div class="book-description">
+                    <h2>
+                        It Ends with Us
+                    </h2>
+                    <p>Colleen Hoover
+                    </p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        
+
+    </body>
+
+</html>
