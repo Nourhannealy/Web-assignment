@@ -1,11 +1,9 @@
 body{
   background-color: #502C0E;
-  
-}
-p{
   font-family: "Lora";
   color: white;
 }
+
 div p{
   margin: 0;
 }

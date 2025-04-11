@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
-   
-    <head >
+<html lang="en">
+    <head>
         <meta charset="UTF-8">
-        <title>Profile</title>
+        <title>Book Search</title> 
         <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
         <link rel="stylesheet" href="Styles/Reader_Nav_Bar.css">
-        <link rel="stylesheet" href="Styles/Reader_Profile.css">
+        <link rel="stylesheet" href="Styles/ReaderBookStatus.css">
         <link rel="stylesheet" href="Styles/footer.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-       </head>
-   
-        <body>
-          <nav class="navbar">
-            <a href="Reader_Side_Nav.html">
+    </head>
+    
+    <body>
+        <!--Navigation bar icons-->
+        <nav class="navbar">
+            <a href="#">
                 <i class="mingcute--book-5-line"></i>
                 <span class="menu">Menu</span>
               </a>
@@ -24,7 +24,7 @@
                 <input type="text" id="search-bar" placeholder="Search..." name="search">
                 <button type="submit" id="search-btn"></button>
             </form>
-            <a href="ReaderBookStatus.html">
+            <a href="#">
                 <i class="mdi--book-cog-outline"></i>
                 <span class="status">Status</span>
             </a>
@@ -38,38 +38,34 @@
             </a>   
         </nav>
 
-        <section class="Main_interface">
-            <div class="title_of_page">
-                    <p>Personal Info</p>
-            </div>
-           <div class="content_screen">
-                <div class="Tabs">
-                    <P class="input_title">Full Name</P>
-                    <input class="input_text" type="text" placeholder="Nour Hany Salem"  >
-                </div>                
-                    
-                <div class="Tabs">
-                    <P class="input_title">Email</P>
-                    <input class="input_text" type="email"placeholder = "nourhanysalem2005@gmail.com" >
-                </div>            
+        <form class="second-search-bar">
+            <span class="material-symbols--search"></span>
+            <input type="text" id="search-bar-2" placeholder="The Magical Language of Others" name="search">
+            <button type="submit" id="search-btn2"></button>
+        </form>
         
-                <div class="Tabs">
-                    <P class="input_title">Phone Number</P>
-                    <input class="input_text" type="tel" size="11"  
-                    placeholder="0114-381-8376"
-                    pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
-                </div>
-                
-        
-                <div class="Tabs">
-                     <P class="input_title">Gender</P>
-                    <input class="input_text" type="text" placeholder="Female">
-                </div>    
-        
-                    <button type="submit" class="Edit"><p>Edit</p></button>      
-           </div>
+        <div class="buttons2">
+            <button>Title</button>
+            <button>Author </button>
+            <button>Category</button>
+        </div>
 
-        </section>
+        <main>
+            <h3>Results for "The Magical Language of Others"</h3>
+            <div class="book-row">
+                <div class="book-container">
+                    <a href="Reader_Book_Details.html"><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1574328700i/46195204.jpg" alt="The Magical Language of Others"/></a>
+                    <div class="book-description">
+                        <h2>
+                            The Magical Language of Others
+                            <span class="mynaui--book-check "></span>
+                        </h2>
+                        <p>E. J. Koh</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
         <footer>
             <div class="footer-container">
               <div class="footer-section">
@@ -102,4 +98,5 @@
           </footer>
 
     </body>
+
 </html>
