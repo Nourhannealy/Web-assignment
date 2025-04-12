@@ -1,3 +1,4 @@
+
 body {
     background-color: #502C0E;
     color: white; 
@@ -11,6 +12,15 @@ body {
     -webkit-background-clip: unset;
     -webkit-text-fill-color: rgb(8, 49, 8);
     background-image: none;
+  }
+
+  .side-books{
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #2E1703 !important;
+    background-image: none !important;
+  }
+  .qlementine-icons--book-open-16.side-books{
+    background-color:  #2E1703;
   }
   .container {
     display: flex; /* Aligns the content in a row */
