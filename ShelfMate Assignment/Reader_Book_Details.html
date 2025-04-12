@@ -2,8 +2,9 @@
 <html lang="en">
     <meta charset="UTF-8">
     <head>
-        <title>Admin Book details page- You've Reached Sam</title>
+        <title>Book details</title>
         <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
+        <Link rel="stylesheet"  href="Styles/Reader_Side_Nav.css">
         <link rel="stylesheet" href="Styles/Reader_Nav_Bar.css">
         <link rel="stylesheet" href="Styles/Reader_Book_Details.css">
         <link rel="stylesheet" href="Styles/footer.css">
@@ -11,33 +12,92 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     </head>
-    <body>
-        
-        <!--Navigation bar icons-->
-        <nav class="navbar">
-            <a href="Reader_Side_Nav.html">
+    <body >
+     <!--Navigation bar icons-->
+     <nav class="navbar"> 
+        <a href="#" >
+            <a class="menu-content" >
                 <i class="mingcute--book-5-line"></i>
                 <span class="menu">Menu</span>
-              </a>
+            </a>
 
+            <!--Side bar-->
+            <div class="side-nav">
+                
+                <div class="logo-exit">
+                  <img src="Library web/ShelfMate-logo.png" alt="logo" class="logo">
+                  <a href="">
+                    <i class="streamline--delete-1-solid"></i>
+                   </a>
+                </div>
+
+                <div class="nav-content">
+                    <a href="#">
+                        <i class="proicons--search side-search"></i>
+                        <span class="side-search">Search Books</span>
+                      </a>
+                      <a href="">
+                        <i class="qlementine-icons--book-open-16 side-books"></i>
+                        <span class="side-books">View Available Books</span>
+                      </a>
+                      <a href="#" >
+                        <i class="mdi--book-cog-outline icon-small side-status"></i>
+                        <span class="side-status">Books Status</span>
+                      </a>
+                      <a href="Reader_Profile.html">
+                        <i class="iconamoon--profile-fill icon-small side-profile"></i>
+                        <span class="side-profile">Profile</span>
+                      </a>
+                      <a href="Login.html">
+                        <i class="majesticons--logout-line side-logout"></i>
+                        <span class="side-logout">Logout</span>
+                      </a>
+                </div>
+            </div>
+        </a>
+
+        <a href="#" class="searchbar-container">
+            <i class="material-symbols--search-rounded "></i>
+            <span class="Search">Search</span>
             <form class="search-bar">
-                <input type="text" id="search-bar" placeholder="Search..." name="search">
-                <button type="submit" id="search-btn"></button>
+                <i class="material-symbols--search"></i>
+                <input type="text" placeholder="Search" name="search">
+                <button type="submit" ></button>
             </form>
-            <a href="ReaderBookStatus.html">
+        </a>
+
+        <div class="dropdown status-dropdown">
+            <a href="#" >
                 <i class="mdi--book-cog-outline"></i>
                 <span class="status">Status</span>
             </a>
+                <div class="dropdown-content">
+                    <a href="#">Borrowed</a>
+                    <a href="#">Not Completed</a>
+                    <a href="#">Completed</a>
+                    <a href="#">Favorites</a>
+                </div>
+        </div>
+            
+        <a href="#" class="books-content">
+            <i class="mingcute--book-6-line"></i>
+            <span class="books">Books</span>
+        </a>
+
+        <div class="dropdown  profile-dropdown">
             <a href="#">
-                <i class="mingcute--book-6-line"></i>
-                <span class="books">Books </span>
-            </a>
-            <a href="Reader_Profile.html">
                 <i class="iconamoon--profile-fill"></i>
                 <span class="profile">Profile</span>
-            </a>   
-        </nav>
-        
+            </a>
+                
+            <div class="dropdown-content ">
+                <a href="#">Settings</a>
+                <a href="#">Log Out</a>
+            </div>
+            
+        </div>         
+    </nav>
+
         <br>
         <br>
         <section>
