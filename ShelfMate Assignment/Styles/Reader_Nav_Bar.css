@@ -7,6 +7,7 @@ body{
 div p{
   margin: 0;
 }
+
 .mingcute--book-5-line {
   display: inline-block;
   width: 50px;
@@ -63,13 +64,47 @@ div p{
   mask-size: 100% 100%;
 }
 
+/*search icon*/
+.material-symbols--search-rounded {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.6 5.6q.275.275.275.7t-.275.7t-.7.275t-.7-.275l-5.6-5.6q-.75.6-1.725.95T9.5 16m0-2q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14'/%3E%3C/svg%3E");
+  background-color: #f1d4bc;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+/* search bar icon*/
+.material-symbols--search {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14'/%3E%3C/svg%3E");
+  background-color: #002809;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.icon-small {
+  width: 30px;
+  height: 30px;
+}
 
 nav i:hover {
   background-color: rgb(8, 49, 8);
   cursor:pointer;
   transition: 0.3s;
-  
 }
+
 a {
   text-decoration: none;
   display: inline-flex;
@@ -113,11 +148,11 @@ a::before {
 }
 
 .navbar {
-  background-color: #603919; /* Background color */ 
+  background-color: #603919; 
   display: flex;
   height: 60px;
-  justify-content: center; /* Centers the icons */
-  gap: 100px; /* Space between icons */
+  justify-content: center; 
+  gap: 100px; 
   position: fixed;
   top: 0;
   right: 0;
@@ -128,7 +163,6 @@ a::before {
   border-top-left-radius: 5px;
 }
 
-
 .search-bar {
   display: flex;
   align-items: center;
@@ -136,9 +170,12 @@ a::before {
   background-color: rgb(208, 204, 204);
   padding: 5px 10px;
   border-radius: 20px;
-  width: fit-content;
+  width: 10cm;
   height: 30px;
-  width: 320px;
+  position: absolute;
+  top: 0; 
+  width: 280px; 
+  opacity: 0; /* to make it hidden*/
   margin-top: 4px;
   margin-left: 0; 
 }
@@ -148,6 +185,8 @@ a::before {
   outline: none;
   font-size: 16px;
   background: none;
+  width: 100%; 
+  padding-left: 10px; /*space for the icon */
 }
 
 .search-bar button {
@@ -156,3 +195,80 @@ a::before {
   cursor: pointer;
   font-size: 18px;
 }
+
+
+.searchbar-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top:4px;
+  left: 580px;
+}
+
+.searchbar-container:hover .search-bar {
+  width: 280px;  
+  opacity: 1;
+  right:-30px;
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.books-content{
+  position: absolute;
+  top:4px;
+  left:950px;
+  margin: 0;
+}
+
+.menu-content {
+  position: relative;
+  right:650px;
+  cursor: pointer;
+}
+
+.dropdown { 
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #002809;
+  border-radius: 8px;
+  width: 150px;
+  padding: 10px 0;  
+  z-index: 1; 
+}
+
+.profile-dropdown {
+  position: absolute; 
+  top: 4px;
+  right: 80px; /* Keep this to position the "Profile" link */
+}
+
+.status-dropdown{
+  position: absolute;
+  top:4px;
+  right:450px;
+}
+
+.status-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.profile-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 20px;
+  margin: 0;
+  display: block;
+  font-size: 15px;
+}
+
+.dropdown-content a:hover {
+  background-color: #0e471b;
+}
+
