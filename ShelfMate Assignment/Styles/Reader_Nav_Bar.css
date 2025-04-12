@@ -64,6 +64,7 @@ div p{
   mask-size: 100% 100%;
 }
 
+
 /*search icon*/
 .material-symbols--search-rounded {
   display: inline-block;
@@ -211,7 +212,9 @@ a::before {
   right:-30px;
   transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
+.status{
+  margin-right: -100px;
+}
 .books-content{
   position: absolute;
   top:4px;
@@ -271,4 +274,3 @@ a::before {
 .dropdown-content a:hover {
   background-color: #0e471b;
 }
-

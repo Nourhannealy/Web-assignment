@@ -26,9 +26,10 @@ body{
  font-weight: 100px;
 }
 .title_of_page{
- margin-top: 20px ; 
- font-size: 30px;
+ margin-top: 50px ; 
+ font-size: 42px;
  color: white;
+ font-weight: 600;
 
 }
 .content_screen{

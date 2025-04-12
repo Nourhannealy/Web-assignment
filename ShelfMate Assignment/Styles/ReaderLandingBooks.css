@@ -1,35 +1,25 @@
 body {
-    font-family: Lora;
+    font-family: "Lora";
+    padding-top: 50px;
 }
-
-.mdi--book-cog-outline{
-    background-color: rgb(8, 49, 8);
-}
-.status{
+.mingcute--book-6-line{
+    background-color: rgb(8, 49, 8) ;
+  }
+  
+  .books {
     -webkit-background-clip: unset;
-    -webkit-text-fill-color: #013220;
+    -webkit-text-fill-color: rgb(8, 49, 8);
     background-image: none;
-}
-
-.mdi--book-cog-outline.side-status{
-    background-color:  #2E1703;
-}
-.side-status{
-    -webkit-background-clip: unset !important;
-    -webkit-text-fill-color: #2E1703 !important;
-    background-image: none !important;
-}
-
-.borrowed{
-    background-color: #956034;
-}
-
+  }
 
 h1 {
     margin-top: 80px;
     text-align: center;
     font-size:3em;
+    font-family: Georgia, 'Times New Roman', serif;
+
 }
+
 h3{
     margin-top: 0;
     font-size:2em;
@@ -43,6 +33,7 @@ button{
     font-family: "Lora";
 }
 
+/* Book status buttons */
 .buttons {
     display: flex;
     justify-content: center;
@@ -60,6 +51,23 @@ button{
     cursor: pointer;
 }
 
+/* Reader search bar buttons */
+.buttons2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px; 
+}
+
+.buttons2 button {
+    padding: 5px 25px; 
+    font-size: 1.6em; 
+}
+
+.buttons2 button:hover {
+    background-color: #956034;
+    cursor: pointer;
+}
 
 main {
     margin-top: 25px;
@@ -165,5 +173,108 @@ img:hover{
 .book-description span {
     flex-shrink: 0; 
 }
+
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 0;
+  }
+  
+  .top-header h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    
+  }
+  
+  .sort-dropdown {
+    position: relative;
+  }
+  
+  .material-symbols--sort {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    cursor: pointer;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 24 24'%3E%3Cpath d='M3 18h6v-2H3v2zm0-5h12v-2H3v2zm0-7v2h18V6H3z'/%3E%3C/svg%3E");
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    transition: background-color 0.3s ease;
+
+  }
+  
+  .sort-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: #703d1f;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    flex-direction: column;
+  }
+  
+  .sort-menu button {
+    background-color: #884f24;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin: 3px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .sort-menu button:hover{
+
+    background-color: #B5672F; 
+  transform: scale(1.05);  
+  
+  }
+
+  .material-symbols--sort:hover { 
+    cursor: pointer; 
+    transform: scale(1.05);
+    background-color: #0a3105; 
+
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
