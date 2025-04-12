@@ -6,6 +6,15 @@ body {
   .mingcute--book-6-line{
     background-color: rgb(8, 49, 8) ;
   }
+
+.mdi--book-cog-outline.side-status{
+    background-color:  #2E1703;
+}
+.side-status{
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #2E1703 !important;
+    background-image: none !important;
+}
   
   .books {
     -webkit-background-clip: unset;
