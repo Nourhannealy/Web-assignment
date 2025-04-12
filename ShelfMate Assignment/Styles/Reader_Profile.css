@@ -10,7 +10,14 @@ body{
   -webkit-text-fill-color: #013220;
   background-image: none;
 }
-
+.side-profile{
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #2E1703 !important;
+  background-image: none !important;
+} 
+.iconamoon--profile-fill.side-profile{
+  background-color:  #2E1703;
+}
 .Main_interface{
   margin-top: 60px ; 
  flex-direction: column;
