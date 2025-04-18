@@ -1,8 +1,6 @@
 body {
     font-family: Lora;
 }
-
-
 .Search{
     -webkit-background-clip: unset !important;
     -webkit-text-fill-color: #013220 !important;
@@ -32,6 +30,9 @@ h3{
     margin-top: 0;
     font-size:2em;
 }
+#search-name{
+    font-size:0.9em;
+}
 
 button{
     background-color: transparent;
@@ -41,19 +42,19 @@ button{
     font-family: "Lora";
 }
 
-.buttons {
+.buttons2 {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     gap: 10px; 
 }
 
-.buttons button {
+.buttons2 button {
     padding: 5px 25px; 
     font-size: 1.6em; 
 }
 
-.buttons button:hover {
+.buttons2 button:hover {
     background-color: #956034;
     cursor: pointer;
 }
@@ -226,6 +227,3 @@ a:link, a:visited {
     color: #366816;
 }
 
-.borrowed{
-    background-color: #956034;
-}
