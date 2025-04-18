@@ -1,4 +1,4 @@
-Hi welcome to Shelfmate!
+Welcome to Shelfmate!
 Start by opening -> Page1_Start
 The start page wil guide you to either the login or sign up page for our website.
 And from there you can navigate as either a reader or an Admin.
