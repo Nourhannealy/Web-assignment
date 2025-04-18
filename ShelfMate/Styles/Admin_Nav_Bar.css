@@ -201,5 +201,6 @@ a::before {
 
 .dropdown-content a:hover {
   background-color: #0e471b;
+  cursor:pointer;
 }
 
