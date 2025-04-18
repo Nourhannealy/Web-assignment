@@ -6,7 +6,7 @@ And from there you can navigate as either a reader or an Admin.
 Reader:
 Reaer_Landing_Book -> Reader's Home Page
 Reader_Book_Status -> Status of the book (Borrowed, Not Completed, Completed, Favorite)
-Reader_Book_Details -> Details of the Specific choosen Book
+Reader_Book_Details -> Details of a specific Book
 Reader_Completed_or_not -> Details of the book status for e.g. Completed or not
 Readr_Search -> Reader can search for the desired book and fiter their search by title, Author, or Category
 Reader_Profile -> Reader's Profile info
@@ -14,8 +14,8 @@ Reader_Profile -> Reader's Profile info
 Admin:
 Admin_Landing_books -> Admin's Home Page
 Admin_Add_Book -> Admin can add details of a new book
-Admin_Edit_Book -> Admin can edit an details of an existing book
-Admin_Book_Details -> Details of the Specific choosen Book
+Admin_Edit_Book -> Admin can edit details of an existing book
+Admin_Book_Details -> Details of a specific Book
 Admin_Profile -> Admin's Profile info
 
 Have fun navigating & exploring our website!
