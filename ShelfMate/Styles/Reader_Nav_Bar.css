@@ -161,6 +161,7 @@ a::before {
   border-bottom-right-radius: 30px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+  z-index: 90; 
 }
 
 .search-bar {
