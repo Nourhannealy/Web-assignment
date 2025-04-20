@@ -2,19 +2,19 @@ body {
     font-family: Lora;
 }
 
-.mdi--book-cog-outline{
+.navbar .mdi--book-cog-outline{
     background-color: rgb(8, 49, 8);
 }
-.status{
+.navbar .status{
     -webkit-background-clip: unset;
     -webkit-text-fill-color: #013220;
     background-image: none;
 }
 
-.mdi--book-cog-outline.side-status{
+.navbar .mdi--book-cog-outline.side-status{
     background-color:  #2E1703;
 }
-.side-status{
+.navbar .side-status{
     -webkit-background-clip: unset !important;
     -webkit-text-fill-color: #2E1703 !important;
     background-image: none !important;
