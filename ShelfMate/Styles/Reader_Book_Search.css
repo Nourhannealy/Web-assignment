@@ -1,23 +1,24 @@
 body {
     font-family: Lora;
 }
-.Search{
+.navbar .Search{
     -webkit-background-clip: unset !important;
     -webkit-text-fill-color: #013220 !important;
     background-image: none !important;
 }
-.material-symbols--search-rounded {
+.navbar .material-symbols--search-rounded {
     background-color: rgb(8, 49, 8);
 }
 
-.side-search{
+.navbar .side-search{
     -webkit-background-clip: unset !important;
     -webkit-text-fill-color: #2E1703 !important;
     background-image: none !important;
 }
-.proicons--search{
-    background-color:  #2E1703;
+.navbar .proicons--search{
+    background-color:  #2E1703 ;
 }
+
 
 
 
