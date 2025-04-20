@@ -33,22 +33,36 @@
             <input type="password" id="confirm-password" placeholder="Confirm Your Password" required />
             <i class="fa-solid fa-eye-slash toggle-eye" data-target="confirm-password"></i>
           </div>
+          <p class="error-message" id="confirm-password-error"></p>
+
           
 
         <label for="email">Email</label>
         <input type="email" id="email" placeholder="Enter Your Email" required />
+        <p class="error-message" id="email-error"></p>
 
         <label for="role">Are You An Admin?</label>
         <select id="role" required>
-          <option disabled selected>Choose Between Admin or Reader</option>
+          <option value="" disabled selected>Choose Between Admin or Reader</option>
           <option value="admin">Admin</option>
           <option value="reader">Reader</option>
         </select>
+        <p class="error-message" id="role-error"></p>
+
 
         <button type="submit">Sign Up</button>
       </form>
     </div>
   </div>
+
+  <div id="custom-alert" class="custom-alert hidden">
+    <div class="alert-content">
+      <p id="alert-message"></p>
+      <button id="close-alert">OK</button>
+    </div>
+  </div>
+
+  <script src="JavaScript/Sign-up.js"></script>
   
 </body>
 </html>
