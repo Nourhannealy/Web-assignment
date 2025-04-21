@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
 body{
   background-color: #502C0E;
   font-family: "Lora";
@@ -99,12 +101,6 @@ div p{
   height: 30px;
 }
 
-nav i:hover {
-  background-color: rgb(8, 49, 8);
-  cursor:pointer;
-  transition: 0.3s;
-}
-
 a {
   text-decoration: none;
   display: inline-flex;
@@ -132,7 +128,6 @@ a span{
 
 a:hover span{
   background-position: 0;
-  font-weight: 600;
 }
 
 a::before {
@@ -149,36 +144,47 @@ a::before {
 
 .navbar {
   background-color: #603919; 
-  display: flex;
+  display: flex; 
   height: 60px;
-  justify-content: center; 
-  gap: 100px; 
-  position: fixed;
-  top: 0;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.6rem; 
+  position: fixed; 
+  top: 0; 
   right: 0;
   left: 0;
+  padding: 0 0.5rem;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  z-index: 90; 
+  z-index: 90;  
 }
+
+
+nav i:hover { 
+  background-color: rgb(8, 49, 8);
+  cursor:pointer;
+  transition: 0.3s;
+}
+
 
 .search-bar {
   display: flex;
   align-items: center;
-  gap: 5px;
-  background-color: rgb(208, 204, 204);
+  gap: 0.5rem;
+  background-color: #d0cccc;
   padding: 5px 10px;
   border-radius: 20px;
-  width: 10cm;
-  height: 30px;
+  max-width: 280px;
+  overflow: hidden;
+  width: 100%;
+  opacity: 0;
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateY(-50%);
   position: absolute;
-  top: 0; 
-  width: 280px; 
-  opacity: 0; /* to make it hidden*/
-  margin-top: 4px;
-  margin-left: 0; 
+  top: 50%;
+  right: 0; 
 }
 
 .search-bar input {
@@ -199,37 +205,24 @@ a::before {
 
 
 .searchbar-container {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top:4px;
-  left: 580px;
+  position: relative;
 }
 
 .searchbar-container:hover .search-bar {
-  width: 280px;  
   opacity: 1;
-  right:-30px;
-  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  width: 280px;
 }
 
+
 .books-content{
-  position: absolute;
-  top:4px;
-  left:950px;
-  margin: 0;
+  position: relative;
 }
 
 .menu-content {
   position: relative;
-  right:650px;
-  cursor: pointer;
+  margin-right: 450px;
 }
 
-.dropdown { 
-  position: relative;
-  display: inline-block;
-}
 
 .dropdown-content {
   display: none;
@@ -239,18 +232,17 @@ a::before {
   width: 150px;
   padding: 10px 0;  
   z-index: 1; 
+  top: 100%;
+  right: 0;
 }
 
 .profile-dropdown {
-  position: absolute; 
-  top: 4px;
-  right: 80px; /* Keep this to position the "Profile" link */
+  position: relative;
+  margin-right: 3rem;
 }
 
 .status-dropdown{
-  position: absolute;
-  top:4px;
-  right:450px;
+  position: relative;
 }
 
 .status-dropdown:hover .dropdown-content {
@@ -264,7 +256,6 @@ a::before {
 .dropdown-content a {
   color: white;
   padding: 10px 20px;
-  margin: 0;
   display: block;
   font-size: 15px;
 }
@@ -274,3 +265,18 @@ a::before {
   cursor:pointer;
 }
 
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+  .navbar > * {
+    flex: 1 1 100%;
+    justify-content: space-around;
+  }
+  .search-bar {
+    max-width: 100%;
+  }
+}
