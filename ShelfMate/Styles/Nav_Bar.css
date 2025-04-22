@@ -1,6 +1,6 @@
 body{
   background-color: #502C0E;
-   font-family: Lora , Arial;
+  font-family: Lora , Arial;
   color: white;
 }
 p{
@@ -173,11 +173,6 @@ a::before {
 }
 
 
-.searchbar-container {
-
-} 
-
-
 .searchbar-container:hover .search-bar {
   width: 280px;  
   opacity: 1;
@@ -247,7 +242,17 @@ nav span{
 
 }
 
-@media (min-width:1200.1px) {
-  
+@media (max-width:715px) {
+  .searchbar-container:hover .search-bar {
+    width: 180px; 
+    right: -65px; 
+  }
+
+}
+@media (max-width:500px) {
+  .searchbar-container:hover .search-bar {
+    width: 100px;  
+    right: -20px;
+  }
 
 }
