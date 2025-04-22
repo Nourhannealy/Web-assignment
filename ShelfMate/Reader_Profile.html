@@ -6,9 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Profile</title>
         <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
-        <Link rel="stylesheet"  href="Styles/Reader_Side_Nav.css">
-        <link rel="stylesheet" href="Styles/Reader_Nav_Bar.css">
-        <link rel="stylesheet" href="Styles/Reader_Profile.css">
+        <link rel="stylesheet" href="Styles/Nav_Bar.css">
+        <link rel="stylesheet" href="Styles/Profile.css">
         <link rel="stylesheet" href="Styles/footer.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,49 +16,12 @@
    
         <body>
     <!--Navigation bar icons-->
-    <nav class="navbar"> 
-      <a href="#" >
-          <a class="menu-content" >
-              <i class="mingcute--book-5-line"></i>
-              <span class="menu">Menu</span>
-          </a>
-
-          <!--Side bar-->
-          <div class="side-nav">
-              
-              <div class="logo-exit">
-                <img src="Library web/ShelfMate-logo.png" alt="logo" class="logo">
-                <a href="">
-                  <i class="streamline--delete-1-solid"></i>
-                 </a>
-              </div>
-
-              <div class="nav-content">
-                   <a href="Reader_Search.html">
-                      <i class="proicons--search side-search"></i>
-                      <span class="side-search">Search Books</span>
-                    </a>
-                    <a href="Reader_Landing_Book.html">
-                      <i class="qlementine-icons--book-open-16 side-books"></i>
-                      <span class="side-books">Available Books</span>
-                    </a>
-                    <a href="Reader_Book_Status.html" >
-                      <i class="mdi--book-cog-outline icon-small side-status"></i>
-                      <span class="side-status">Books Status</span>
-                    </a>
-                    <a href="Reader_Profile.html">
-                      <i class="iconamoon--profile-fill icon-small side-profile"></i>
-                      <span class="side-profile">Profile</span>
-                    </a>
-                    <a href="Login.html">
-                      <i class="majesticons--logout-line side-logout"></i>
-                      <span class="side-logout">Logout</span>
-                    </a>
-              </div>
-          </div>
-      </a>
-
-      <a href="Reader_Search.html" class="searchbar-container">
+    <nav class="navbar">
+      <a href="Admin_Side_Nav.html">          
+          <i class="mingcute--book-5-line"></i>
+          <span class="menu">Menu</span>
+        </a>
+        <a href="#" class="searchbar-container">
           <i class="material-symbols--search-rounded "></i>
           <span class="Search">Search</span>
           <form class="search-bar">
@@ -68,25 +30,24 @@
               <button type="submit" ></button>
           </form>
       </a>
-
+    
       <div class="dropdown status-dropdown">
-          <a href="Reader_Book_Status.html" >
+          <a href="ReaderBookStatus.html" >
               <i class="mdi--book-cog-outline"></i>
               <span class="status">Status</span>
           </a>
               <div class="dropdown-content">
-                  <a href="Reader_Book_Status.html">Borrowed</a>
-                  <a href="Reader_Book_Status.html">Not Completed</a>
-                  <a href="Reader_Book_Status.html">Completed</a>
-                  <a href="Reader_Book_Status.html">Favorites</a>
+                  <a href="ReaderBookStatus.html">Borrowed</a>
+                  <a href="ReaderBookStatus.html">Not Completed</a>
+                  <a href="ReaderBookStatus.html">Completed</a>
+                  <a href="ReaderBookStatus.html">Favorites</a>
               </div>
       </div>
           
-      <a href="Reader_Landing_Book.html" class="books-content">
+      <a href="AdminLandingBooks.html">
           <i class="mingcute--book-6-line"></i>
           <span class="books">Books</span>
       </a>
-
       <div class="dropdown  profile-dropdown">
           <a href="Reader_Profile.html">
               <i class="iconamoon--profile-fill"></i>
@@ -98,9 +59,8 @@
               <a href="Login.html">Log Out</a>
           </div>
           
-      </div>         
+      </div>   
   </nav>
-
 
         <section class="Main_interface">
             <div class="title_of_page">
@@ -109,28 +69,45 @@
            <div class="content_screen">
                 <div class="Tabs">
                     <P class="input_title">Full Name</P>
-                    <input class="input_text" type="text" placeholder="Nour Hany Salem"  >
+                    <input id="fullName" class="input_text" type="text" value="Nour Hany Salem"  disabled>
                 </div>                
                     
                 <div class="Tabs">
                     <P class="input_title">Email</P>
-                    <input class="input_text" type="email"placeholder = "nourhanysalem2005@gmail.com" >
+                    <input id="email" class="input_text" type="email"value = "nourhanysalem2005@gmail.com" disabled>
                 </div>            
         
                 <div class="Tabs">
                     <P class="input_title">Phone Number</P>
-                    <input class="input_text" type="tel" size="11"  
-                    placeholder="0114-381-8376"
-                    pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+                    <input id="phone" class="input_text" type="tel" size="11"  
+                    value="0114-381-8376"
+                    pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" disabled>
                 </div>
                 
         
-                <div class="Tabs">
-                     <P class="input_title">Gender</P>
-                    <input class="input_text" type="text" placeholder="Female">
+                <div class="gender-details">
+                  <input type="radio" name="gender" id="dot-1" value="Male" disabled>
+                  <input type="radio" name="gender" id="dot-2" value="Female" disabled>
+                  <input type="radio" name="gender" id="dot-3" value="Prefer not to say" checked disabled>
+                     <span class="gender-title">Gender</span>
+                     <div class="category">
+                      <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                      </label>
+                      <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                      </label>
+                      <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefer not to say</span>
+                      </label>
+                     </div>
                 </div>    
         
-                    <button type="submit" class="Edit"><p>Edit</p></button>      
+                <button class="saveButton" id="editBtn" onclick="toggleEdit()">Edit</button>
+                <div id="toast" class="custom-toast">Changes saved!</div>
            </div>
 
         </section>
@@ -164,6 +141,8 @@
             </div>
         
           </footer>
+
+          <script src="JavaScript/Profile.js"></script>
 
     </body>
 </html>
