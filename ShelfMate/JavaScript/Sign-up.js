@@ -41,10 +41,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (isValid) {
-        showAlert("Sign up successful!", () => {
-          document.querySelector("form").submit(); 
-        });
-      }
+    
+      localStorage.setItem("user", JSON.stringify({
+        name: name,
+        email: email,
+        role: role
+      }));
+    
+      showAlert("Sign up successful!", () => {
+        if (role === "admin") {
+          window.location.href = "Adming_Landing_books.html";
+        } else if (role === "reader") {
+          window.location.href = "Reader_Landing_book.html";
+        }
+      });
+    }
+    
+    
   });
 
   function validateEmail(email) {
