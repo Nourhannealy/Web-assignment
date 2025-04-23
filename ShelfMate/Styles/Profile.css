@@ -54,7 +54,20 @@ margin-top: 100px ;
  border-radius: 2px;
  border: none;
  outline: #603919;
+} 
+
+.label-with-optional {
+  display: flex;
+  align-items: center;
+  gap: 130px;
 }
+
+.optional {
+  font-size: 13px;
+  color: #d3c6b8;
+  font-style: italic;
+}
+
 .input_title,
 .gender-details .gender-title{
 font-size: 16px;
