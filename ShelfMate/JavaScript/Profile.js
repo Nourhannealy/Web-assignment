@@ -53,16 +53,28 @@ function showToast(message) {
 
 
 // Load saved data when the page loads
-window.onload = function() {
+window.onload = function () {
   const data = JSON.parse(localStorage.getItem("userProfile"));
   if (data) {
-    document.getElementById("fullName").value = data.fullName;
-    document.getElementById("email").value = data.email;
-    document.getElementById("phone").value = data.phone;
+    document.getElementById("fullName").value = data.name || "";
+    document.getElementById("email").value = data.email || "";
+    document.getElementById("phone").value = data.phone || "";
 
-    // Set the correct radio button
     if (data.gender === "Male") document.getElementById("dot-1").checked = true;
     else if (data.gender === "Female") document.getElementById("dot-2").checked = true;
     else if (data.gender === "Prefer not to say") document.getElementById("dot-3").checked = true;
+  }
+};
+
+window.onload = function() {
+  const user = JSON.parse(localStorage.getItem("userProfile"));
+  if (user) {
+    // Display user info
+    document.getElementById("fullName").textContent = `Full Name: ${user.name}`;
+    document.getElementById("email").textContent = `Email: ${user.email}`;
+    document.getElementById("phone").textContent = `Phone: ${user.phone}`;
+    document.getElementById("gender").textContent = `Gender: ${user.gender}`;
+  } else {
+    document.getElementById("profile-info").innerHTML = "<p>No user info found.</p>";
   }
 };
