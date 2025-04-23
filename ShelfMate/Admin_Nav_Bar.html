@@ -5,16 +5,25 @@
         <title>Admin nav</title>
         <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
         <link rel="stylesheet" href="Styles/Nav_Bar.css">
+        <link rel="stylesheet" href="Styles/Side_Nav.css">
+        <link rel="stylesheet" href="Styles/Admin_Book_Details.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="logo-exit">
+            <img src="Library web/ShelfMate-logo.png" alt="logo" class="Main-logo" >
+            <a href="">
+              <i class="streamline--delete-1-solid"></i>
+             </a>
+          </div>
         <nav class="navbar">
-            <a href="Admin_Side_Nav.html">          
-                <i class="mingcute--book-5-line"></i>
-                <span class="menu">Menu</span>
-              </a>
+            <a href="AdminLandingBooks.html">
+                <i class="mingcute--book-6-line"></i>
+                <span class="books">Books</span>
+            </a>
+            
               <a href="#" class="searchbar-container">
                 <i class="material-symbols--search-rounded "></i>
                 <span class="Search">Search</span>
@@ -24,14 +33,11 @@
                     <button type="submit" ></button>
                 </form>
             </a>
-            <a href="Admin_Add_Book.html">
-                <i class="line-md--plus"></i>
-                <span class="add">Add Book</span>
-            </a>
-            <a href="AdminLandingBooks.html">
-                <i class="mingcute--book-6-line"></i>
-                <span class="books">Books</span>
-            </a>
+<a href="Admin_Add_Book.html">
+    <i class="line-md--plus"></i>
+    <span class="add">Add Book</span>
+</a>
+        
             <div class="dropdown  profile-dropdown">
                 <a href="Reader_Profile.html">
                     <i class="iconamoon--profile-fill"></i>
@@ -43,7 +49,46 @@
                     <a href="Login.html">Log Out</a>
                 </div>
                 
-            </div>   
+            </div>  
+         
+        </nav>
+        <nav class="side-bar">
+               
+            <!-- <div class="overlay"> -->
+              <div>
+      
+              
+            
+            <a href="Admin_Add_Book.html" class="side-icon">
+                <i class="line-md--plus icon"></i>
+                <p class="names">Add New Book</p>
+              </a>
+         
+      
+           
+            <a href="ReaderLandingBooks.html"class="side-icon">
+                <i class="mingcute--book-6-line icon"></i>
+                <p class="names">View Available Books</p> 
+            </a>
+      
+          
+          
+            <a href="Admin_Profile.html"class="side-icon">
+                
+                <i class="iconamoon--profile-fill icon" ></i>
+                <p class="names">Profile</p>
+            </a>
+            
+              
+          
+         
+            <a href="Start.html" class="side-icon">
+                <i class="iconamoon--logout icon "></i>
+                <p class="names">LogOut</p>
+             </a>
+             
+        
+           
         </nav>
     </body>
 
