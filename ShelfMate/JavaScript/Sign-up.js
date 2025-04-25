@@ -79,3 +79,19 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 });
+
+function signUp() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const gender = document.querySelector('input[name="gender"]:checked')?.value; // Gender selection
+
+  // Create user object
+  const user = { name, email, phone, gender };
+
+  // Save to localStorage
+  localStorage.setItem("userProfile", JSON.stringify(user));
+
+  // Redirect to profile page
+  window.location.href = "profile.html";
+}
