@@ -45,6 +45,7 @@ footer {
 .footer-section p {
     margin: 8px 0;
     line-height: 1.6;
+    text-align: start;
 }
 
 .footer-section a {
