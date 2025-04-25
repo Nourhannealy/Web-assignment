@@ -1,7 +1,7 @@
 //Function to filter search depending on which button is clicked
 function search(){
 
-    const buttons =document.querySelectorAll(".buttons2 button");
+    const buttons =document.querySelectorAll(".buttons button");
     const searchbarInput= document.querySelector("#search-bar-2");
     const books= document.querySelectorAll(".book-container");
     const searchName= document.querySelector("#search-name");
@@ -60,18 +60,17 @@ function search(){
             } else {
                 book.style.display="none";
             }
-        })    
-    }
-    searchbarInput.addEventListener("input",()=>{
-        filterSearch();
-        // update results for "" while searching
-        const currentSearchValue=searchbarInput.value;
-        if (currentSearchValue) {
-            searchName.textContent=currentSearchValue;
+        }) 
+        // update results for "" while searching        
+        if (searchbarValue) {
+            searchName.textContent=searchbarInput.value;
         } else {
             searchName.textContent="";
-        }
-        
+        }   
+    }
+    searchbarInput.addEventListener("input",()=>{
+        filterSearch();        
     })
 }
 search();
+
