@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Book Search</title> 
         <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
+        <Link rel="stylesheet"  href="Styles/AI_assistant.css">
         <Link rel="stylesheet"  href="Styles/Reader_Side_Nav.css">
         <link rel="stylesheet" href="Styles/Reader_Nav_Bar.css">
         <link rel="stylesheet" href="Styles/footer.css">
@@ -49,7 +50,7 @@
                       <i class="iconamoon--profile-fill icon-small side-profile"></i>
                       <span class="side-profile">Profile</span>
                     </a>
-                    <a href="Login.html">
+                    <a href="Page1_Start.html">
                       <i class="majesticons--logout-line side-logout"></i>
                       <span class="side-logout">Logout</span>
                     </a>
@@ -57,13 +58,13 @@
           </div>
       </a>
 
-      <a href="Reader_Search.html" class="searchbar-container">
+      <a class="searchbar-container"> 
           <i class="material-symbols--search-rounded "></i>
           <span class="Search">Search</span>
           <form class="search-bar">
               <i class="material-symbols--search"></i>
-              <input type="text" placeholder="Search" name="search">
-              <button type="submit" ></button>
+              <input type="text" id="search-bar-1" placeholder="Search..." name="search">
+              <button type="submit" id="search-btn1"></button>
           </form>
       </a>
 
@@ -94,7 +95,7 @@
               
           <div class="dropdown-content ">
               <a href="#">Settings</a>
-              <a href="Login.html">Log Out</a>
+              <a href="Page1_Start.html">Log Out</a>
           </div>
           
       </div>         
@@ -128,6 +129,16 @@
       </div>
               
     </footer>
-  
+
+    <!--Assistant-->
+    <div class="ai" id="ai">
+      <img src="Library web/Chatbot.png" class="assistant-image">
+      <div class="chat">
+          <p>How can I assist you today?</p>
+          <input type="text" class="input-box" id="user-input" placeholder="Ask me something..." />
+          <div id="response" class="response"></div>
+      </div>
+    </div>
+    
     </body>
 </html>
