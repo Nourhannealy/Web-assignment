@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+   
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Add Book</title>
+        <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
+        <link rel="stylesheet" href="Styles/Admin_Landing_books.css">
+        <link rel="stylesheet" href="Styles/Side_Nav.css">
+        <link rel="stylesheet" href="Styles/Nav_Bar.css">
+        <link rel="stylesheet" href="Styles/body.css">
+        <link rel="stylesheet" href="Styles/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+       </head>
+   
+    <body>
+    <!--Navigation bar icons-->
+    <div class="logo-exit">
+      <img src="Library web/ShelfMate-logo.png" alt="logo" class="Main-logo" >
+      <a href="">
+        <i class="streamline--delete-1-solid"></i>
+       </a>
+    </div>
+  <nav class="navbar">
+      <a href="AdminLandingBooks.html">
+          <i class="mingcute--book-6-line"></i>
+          <span class="books">Books</span>
+      </a>
+      
+        <a href="#" class="searchbar-container">
+          <i class="material-symbols--search-rounded "></i>
+          <span class="Search">Search</span>
+          <form class="search-bar">
+              <i class="material-symbols--search"></i>
+              <input type="text" placeholder="Search" name="search">
+              <button type="submit" ></button>
+          </form>
+            </a>
+<a href="Admin_Add_Book.html">
+<i class="line-md--plus"></i>
+<span class="add">Add Book</span>
+</a>
+  
+      <div class="dropdown  profile-dropdown">
+          <a href="Reader_Profile.html">
+              <i class="iconamoon--profile-fill"></i>
+              <span class="profile">Profile</span>
+          </a>
+              
+          <div class="dropdown-content ">
+              <a href="#">Settings</a>
+              <a href="Login.html">Log Out</a>
+          </div>
+          
+      </div>  
+   
+  </nav>
+  <nav class="side-bar">
+         
+      <!-- <div class="overlay"> -->
+        <div>
+
+        
+      
+      <a href="Admin_Add_Book.html" class="side-icon">
+          <i class="line-md--plus icon"></i>
+          <p class="names">Add New Book</p>
+        </a>
+   
+
+     
+      <a href="ReaderLandingBooks.html"class="side-icon">
+          <i class="mingcute--book-6-line icon"></i>
+          <p class="names">View Available Books</p> 
+      </a>
+
+    
+    
+      <a href="Admin_Profile.html"class="side-icon">
+          
+          <i class="iconamoon--profile-fill icon" ></i>
+          <p class="names">Profile</p>
+      </a>
+      
+        
+    
+   
+      <a href="Start.html" class="side-icon">
+          <i class="iconamoon--logout icon "></i>
+          <p class="names">LogOut</p>
+       </a>
+       
+  
+     
+  </nav>
+          <h1>Welcome "name" to ShelfMate</h1>
+        
+  
+        <main>
+
+
+            <div class="top-header">
+                <h2>Available Books</h2>
+                <div class="icon-row">
+
+                  <div class="search-container" id="searchContainer">
+                    <span class="material-symbols--search" id="searchIcon" onclick="expandSearch()"></span>
+                    <input type="text" placeholder="Search..." id="searchInput" />
+                  </div>
+
+                 <div class="sort-dropdown">
+                    <span class="material-symbols--sort" onclick="toggleSortMenu()" title="Sort"></span>
+                    
+                    <div class="sort-menu" id="sortMenu">
+                      <button>Date</button>
+                      <button>ID</button>
+                    </div>
+
+                  </div>
+
+                </div>
+            </div>
+
+            <div class="book-row"> 
+                <div class="book-container">
+                    <a href="Admin_Book_Details.html">
+                        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1574328700i/46195204.jpg" alt="The Magical Language of Others"/>
+                    </a>
+                    <div class="book-description">
+                        <h2>
+                            <a href="Admin_Book_Details.html">The Magical Language of Others</a>
+                            <span class="mynaui--book-check"></span>
+                        </h2>
+                        <a href="Admin_Book_Details.html"><p>E. J. Koh</p></a>
+                    </div>
+                </div>
+                
+                <div class="book-container">
+                    <a href="Admin_Book_Details.html">
+                    <img src="https://m.media-amazon.com/images/I/81q77Q39nEL._AC_UF1000,1000_QL80_.jpg" alt="Harry Potter and the Philosopher's Stone"/>
+                    </a>
+                    <div class="book-description">
+                     <h2>
+                            <a href="Admin_Book_Details.html">Harry Potter and the Philosopher's Stone</a>
+                            <span class="mynaui--book-slash"></span>
+                    </h2>
+                    <p>J. K. Rowling</p>
+                    </div>
+                </div>
+    
+                <div class="book-container">
+                         <a href="Admin_Book_Details.html">
+                        <img src="https://m.media-amazon.com/images/I/81-+p+G9WDL._AC_SL1500_.jpg" alt="A Good Girl's Guide to Murder"/>
+                        </a>
+                        <div class="book-description">
+                        <h2>
+                            <a href="Admin_Book_Details.html"> A Good Girl's Guide to Murder</a>
+                            <span class="mynaui--book-slash"></span>
+                        </h2>
+                        <p>Holly Jackson</p>
+                        </div>
+                </div>
+    
+                <div class="book-container">
+                    <a href="Admin_Book_Details.html">
+                        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1582434073i/50771500.jpg" alt="ما رواه البحر"/>
+                     </a>   
+                        <div class="book-description">
+                        <h2>
+                            <a href="Admin_Book_Details.html">ما رواه البحر</a>
+                            <span class="mynaui--book-check"></span>
+                        </h2>
+                        <p>ساندرا سراج</p>
+                        </div>
+                </div>
+    
+                <div class="book-container">
+                    <a href="Admin_Book_Details.html">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBXljbqv84f7BPUWLEuoyJ3jTU8tLdp2f91w&s" alt="Things We Never Got Over"/>
+                    </a>
+                        <div class="book-description">
+                        <h2>
+                            <a href="Admin_Book_Details.html">Things We Never Got Over</a>
+                            <span class="mynaui--book-check"></span>
+                        </h2>
+                        <p>Lucy Score</p>
+                        </div>
+                </div>
+    
+                <div class="book-container">
+                    <a href="Admin_Book_Details.html">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs4EEPYbDupdhm2d_x7wTPWn8oNarNvC5fFw&s" alt="It Ends with Us"/>
+                        </a>
+                        <div class="book-description">
+                        <h2>
+                            <a href="Admin_Book_Details.html">It Ends with Us</a>
+                            <span class="mynaui--book-check"></span>
+                        </h2>
+                        <p>Colleen Hoover</p>
+                        </div>
+                </div>
+    
+            </div>
+          </main>        
+          <footer>
+            <div class="footer-container">
+              <div class="footer-section">
+                <h3>ShelfMate</h3>
+                <p>Choose your story , Choose your journey</p>
+              </div>
+              <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:support@onlinelibrary.com">support@onlinelibrary.com</a></p>
+              </div>
+          
+              <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                  <a href="https://facebook.com/YourLibrary"><span class="ic--baseline-facebook"></span></a>
+                  <a href="https://twitter.com/YourLibrary"><span class="carbon--logo-x"></span></a>
+                  <a href="https://instagram.com/YourLibrary"><span class="mdi--instagram"></span></a>
+                </div>
+              </div>
+            </div>
+          
+            <div class="footer-bottom">
+              <p>&copy; 2025 Online Library. All rights reserved.</p>
+              <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        
+          </footer>
+    
+    </body>
+    
+    </html>
+    
+    
