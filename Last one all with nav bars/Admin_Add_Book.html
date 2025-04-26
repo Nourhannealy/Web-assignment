@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+   
+    <head >
+        <meta charset="UTF-8">
+        <title>Admin Add Book</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
+        <link rel="stylesheet" href="Styles/Admin_Add_Book.css">
+        <link rel="stylesheet" href="Styles/Side_Nav.css">
+        <link rel="stylesheet" href="Styles/Nav_Bar.css">
+        <link rel="stylesheet" href="Styles/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+       </head>
+   
+    <body>
+    <div class="logo-exit">
+            <img src="Library web/ShelfMate-logo.png" alt="logo" class="Main-logo" >
+            <a href="">
+              <i class="streamline--delete-1-solid"></i>
+             </a>
+          </div>
+        <nav class="navbar">
+            <a href="Adming_Landing_books.html">
+                <i class="mingcute--book-6-line"></i>
+                <span class="books">Books</span>
+            </a>
+            
+              <a href="#" class="searchbar-container">
+                <i class="material-symbols--search-rounded "></i>
+                <span class="Search">Search</span>
+                <form class="search-bar">
+                    <i class="material-symbols--search"></i>
+                    <input type="text" placeholder="Search" name="search">
+                    <button type="submit" ></button>
+                </form>
+            </a>
+<a href="Admin_Add_Book.html">
+    <i class="line-md--plus"></i>
+    <span class="add">Add Book</span>
+</a>
+        
+            <div class="dropdown  profile-dropdown">
+                <a href="Admin_Profile.html">
+                    <i class="iconamoon--profile-fill"></i>
+                    <span class="profile">Profile</span>
+                </a>
+                    
+                <div class="dropdown-content ">
+                    <a href="#">Settings</a>
+                    <a href="Login.html">Log Out</a>
+                </div>
+                
+            </div>  
+         
+        </nav>
+        <nav class="side-bar">
+               
+            <!-- <div class="overlay"> -->
+              <div>
+      
+              
+            
+            <a href="Admin_Add_Book.html" class="side-icon">
+                <i class="line-md--plus icon"></i>
+                <p class="names">Add New Book</p>
+              </a>
+         
+      
+           
+            <a href="Adming_Landing_books.html"class="side-icon">
+                <i class="mingcute--book-6-line icon"></i>
+                <p class="names">View Available Books</p> 
+            </a>
+      
+          
+          
+            <a href="Admin_Profile.html"class="side-icon">
+                
+                <i class="iconamoon--profile-fill icon" ></i>
+                <p class="names">Profile</p>
+            </a>
+            
+              
+          
+         
+            <a href="Start.html" class="side-icon">
+                <i class="iconamoon--logout icon "></i>
+                <p class="names">LogOut</p>
+             </a>
+             
+        
+           
+        </nav>
+
+
+
+      
+        <section class="Main_interface">
+            <div >
+                    <p class="title_of_page">Add New Book</p>
+            </div>
+           <div class="content_screen">
+                <div class="Tabs">
+                    <P class="input_title">Book ID</P>
+                    <input class="input_text" type="number"  >
+                </div>                
+                    
+                <div class="Tabs">
+                    <P class="input_title">Book Name</P>
+                    <input class="input_text" type="text" >
+                </div>            
+        
+                <div class="Tabs">
+                    <P class="input_title">Author</P>
+                    <input class="input_text" type="text"  >
+                </div>
+                
+        
+                <div class="Tabs">
+                     <P class="input_title">Category</P>
+                    <input class="input_text" type="text"  >
+                </div>    
+        
+                <div class="Tabs">
+                    <P class="input_title">Description</P>
+                    <input class="input_text" type="text"  >
+                </div>
+                <div >
+                    <P class="input_title">Upload Book Image</P>
+                    
+                    <input type="file" class="upload-button">
+                    <button type="submit" class="submit"><p>Save</p></button>
+                      
+                </div>
+           </div>
+
+        </section>
+    </body>
+</html>
