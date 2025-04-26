@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mark Completed</title>
+        <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
+        <Link rel="stylesheet"  href="Styles/AI_assistant.css">
+        <Link rel="stylesheet"  href="Styles/Side_Nav.css">
+        <link rel="stylesheet" href="Styles/Nav_Bar.css">
+        <link rel="stylesheet" href="Styles/Reader_Completed_or_not.css">
+        <link rel="stylesheet" href="Styles/Reader_Book_Details.css">
+        <link rel="stylesheet" href="Styles/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+    <!--Navigation bar icons-->
+            <div id="navbar"></div>
+            <br>
+            <br>
+            <section>
+            
+            <div class="container">
+            
+                <!--Book cover-->
+                <div class="book-cover">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1610730335i/53086843.jpg" alt="You've Reached Sam book cover">
+                </div>
+            
+                <div class="book-details">
+
+                    <input type="checkbox" id="heart-toggle" class="icon-toggle-checkbox" hidden>
+                    <label for="heart-toggle" class="icon-toggle">
+                        <div class="famicons--heart-outline"></div>
+                        <div class="famicons--heart"></div>
+                    </label>
+                
+                    <h1>You've Reached Sam</h1>
+                    <p><u>Romance</u> | <u>Drama</u> | <u>Loss</u></p>
+                
+
+                    <div class="border-box">
+                        <p><a href="https://www.google.com/search?q=Dustin+Thao&oq=Dustin+Thao&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEC4YQNIBCDI4OTRqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8" id="Authorname">Dustin Thao</a></p> 
+                        <p id="Author">Author</p>
+                    </div>
+            
+                    <br>
+                    <p>18 Chapters</p>
+
+                    <br>
+
+                    <!--Available or Unavailabe-->
+                    <div class="availability">
+                        <span class="mynaui--book-check"></span>
+                        <span class="availability-text">Available</span>
+                    </div>
+                    
+                    
+            
+                </div>
+            </div>
+
+            <!--Description-->
+            <div class="book-description">
+                <h1>About Book</h1>
+                <div class="about-book">
+                    <p>What would you do if you had a second chance at goodbye?</p>
+                    <p>
+                        Filled with a diverse cast of characters, the heartache of first love and loss, 
+                        and the kind of friends that can get you through anything, plus a touch of magic, 
+                        You've Reached Sam will make an instant connection with anyone looking for a 
+                        big emotional romance of a read.
+                    </p>
+                </div>
+
+                <div class="button-container">
+                    <button class="button" onclick="showMarkCompletedAlert()">Mark Completed</button>
+                </div>
+
+                <div id="customAlert" class="custom-alert" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.5); justify-content: center; align-items: center;">
+                    <div class="alert-box">
+                        <p id="alertMessage"></p>
+                        <div class="alert-buttons" style="margin-top:20px;">
+                            <button id="alertConfirmBtn">OK</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <script>
+            function showMarkCompletedAlert() {
+                const customAlert = document.getElementById('customAlert');
+                const alertMessage = document.getElementById('alertMessage');
+                const alertConfirmBtn = document.getElementById('alertConfirmBtn');
+
+                alertMessage.textContent = "You Marked Completed this book";
+                customAlert.style.display = 'flex';
+
+                alertConfirmBtn.onclick = () => {
+                    customAlert.style.display = 'none';
+                    window.location.href = "Reader_Book_Status.html";
+                };
+            }
+
+        </script>
+        <div id="Assistant"></div>
+        <div id="footer"></div>
+        <script src="JavaScript/Reader_page.js"></script>
+
+    </body>
+
+</html>

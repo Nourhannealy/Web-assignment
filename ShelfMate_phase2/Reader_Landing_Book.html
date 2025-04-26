@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Available Books</title>
+        <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
+        <Link rel="stylesheet"  href="Styles/AI_assistant.css">
+        <Link rel="stylesheet"  href="Styles/Side_Nav.css">
+        <link rel="stylesheet" href="Styles/Nav_Bar.css">
+        <link rel="stylesheet" href="Styles/Reader_Landing_book.css">
+        <link rel="stylesheet" href="Styles/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+       
+    </head>
+
+
+      
+ <body>
+     <!--Navigation bar-->
+     <div id="navbar"></div>
+
+  <br>
+  <br>
+  
+        
+    <h1>Welcome "name" to ShelfMate</h1>
+    <main>
+        <div class="top-header">
+            <h2>Available Books</h2>             
+                <div class="sort-dropdown">
+                    <span class="material-symbols--sort" title="Sort"></span>
+                    <div class="sort-menu" id="sortMenu">
+                      <button>New</button>
+                      <button>Old</button>
+                      <button>Available</button>
+                      <button>Unavailable</button>
+                    </div>
+                </div>
+        </div>
+     
+
+
+        <!--The Javascript code is here-->
+
+
+        <div class="book-row"></div>
+        <script src="JavaScript/Reader_page.js"></script>
+        <script src="JavaScript/Reader_Book_Search.js"></script>
+        <script src="JavaScript/Books_Data.js"></script>
+        <script src="JavaScript/Adming_Landing_books.js" >
+           
+        </script>
+        
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const user = JSON.parse(localStorage.getItem("userProfile"));
+      if (user && user.name) {
+        document.querySelector("h1").innerHTML = `Welcome ${user.name} to ShelfMate`;
+      }
+    });
+  </script>
+
+<!----------------------------------->
+      </main>     
+      <div id="Assistant"></div>
+      <div id="footer"></div>
+
+</body>
+
+</html>
+

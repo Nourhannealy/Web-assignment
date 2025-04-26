@@ -1,0 +1,76 @@
+body {
+  font-family: "Lora";
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #502C0E;
+}
+
+.assistant-image{
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+}
+
+.assistant-image:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.ai{
+  position: fixed;
+  bottom:50px;
+  right:50px;
+}
+
+.chat{
+  position:absolute;
+  right: 80px;
+  width:200px;
+  opacity: 0;
+  background-color: #002809;
+  border-radius: 10px;
+  font-family: "Lora";
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 18px;
+  padding-bottom: 18px; /*was padding 3 */
+  bottom: 0px; 
+}
+.chat p{
+  color: white;
+  font-size:15px;
+  text-align: center;
+}
+.input-box{
+  margin-left: 10px;
+  border-color: transparent;
+  border-radius: 5px;
+  position: relative;
+  top: -4px;
+  padding: 3px;
+  outline: none;
+  top: 10px;
+}
+.ai:hover .chat{
+  opacity: 1;
+  z-index: 1; 
+}
+
+.response {
+  margin-top: 20px;
+  background-color: #0e471b;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 14px;
+  text-align: left;
+  word-wrap: break-word;
+  width:190px;
+  margin-left: 3px;
+  text-align: center;
+}
+
+
