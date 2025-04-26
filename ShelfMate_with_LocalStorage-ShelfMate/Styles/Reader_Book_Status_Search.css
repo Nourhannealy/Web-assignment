@@ -1,0 +1,254 @@
+/* Book Status Page Styles */
+.status-page .navbar .mdi--book-cog-outline {
+    background-color: rgb(8, 49, 8);
+}
+.status-page .navbar .status {
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #013220;
+    background-image: none;
+}
+.status-page .navbar .mdi--book-cog-outline.side-status {
+    background-color: #2E1703;
+}
+.status-page .navbar .side-status {
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #2E1703 !important;
+    background-image: none !important;
+}
+
+/* Book Search */
+.search-page .navbar .Search{
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #013220 !important;
+    background-image: none !important;
+}
+.search-page .navbar .material-symbols--search-rounded {
+    background-color: rgb(8, 49, 8);
+}
+
+.search-page .navbar .side-search{
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #2E1703 !important;
+    background-image: none !important;
+}
+.search-page .navbar .proicons--search{
+    background-color:  #2E1703 ;
+}
+
+
+body {
+    font-family: Lora;
+} 
+
+
+h1 {
+    margin-top: 80px;
+    text-align: center;
+    font-size:3em;
+}
+h3{
+    margin-top: 0;
+    font-size:2em;
+}
+
+#search-name{
+    font-size:0.9em;
+}
+
+button{
+    background-color: transparent;
+    border: 2px solid #956034;
+    color: white;
+    border-radius: 17px;    
+    font-family: "Lora";
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px; 
+}
+
+.buttons button {
+    padding: 5px 15px; 
+    font-size: 1.4em; 
+}
+
+.buttons button:hover {
+    background-color: #956034;
+    cursor: pointer;
+}
+
+
+main {
+    margin-top: 25px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #956034;
+    border-radius: 15px;
+    width:20cm;
+    margin-left: auto;
+    margin-right: auto;
+    height: 8.8cm; 
+    overflow-y: auto; 
+}
+
+main::-webkit-scrollbar-track {
+    background-color:transparent; 
+}
+
+main::-webkit-scrollbar {
+    width: 8px; /*this is the thicknes*/
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: #002809;
+    border-radius: 15px; 
+}
+
+main::-webkit-scrollbar-thumb:hover {
+    background-color: #0e471b; 
+}
+
+img{
+    width: 3cm;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+img:hover{
+    transform: scale(1.05);
+    cursor: pointer; 
+}
+
+.mynaui--book-check {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='M5 20.25c0 .414.336.75.75.75h10.652C17.565 21 18 20.635 18 19.4v-1.445M5 20.25A2.25 2.25 0 0 1 7.25 18h10.152q.339 0 .598-.045M5 20.25V6.2c0-1.136-.072-2.389 1.092-2.982C6.52 3 7.08 3 8.2 3h9.2c1.236 0 1.6.437 1.6 1.6v11.8c0 .995-.282 1.425-1 1.555'/%3E%3Cpath d='m9.6 10.323l1.379 1.575a.3.3 0 0 0 .466-.022L14.245 8'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #225204;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.mynaui--book-slash {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M5 20.25c0 .414.336.75.75.75h10.652C17.565 21 18 20.635 18 19.4v-1.445M5 20.25A2.25 2.25 0 0 1 7.25 18h10.152q.339 0 .598-.045M5 20.25V6.2c0-1.136-.072-2.389 1.092-2.982C6.52 3 7.08 3 8.2 3h9.2c1.236 0 1.6.437 1.6 1.6v11.8c0 .995-.282 1.425-1 1.555M21 3L3 21'/%3E%3C/svg%3E");
+    background-color: #74150F;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.book-row {
+    display: flex;
+    flex-wrap: wrap; /*Allows wrapping ,so after 4 books are in a row it goes down another row */
+    justify-content: flex-start; 
+    gap: 20px;/*space between the books */
+}
+
+.book-container {
+    display: flex;
+    flex-direction: column; 
+    width: calc(25% - 20px);  /*Set the width of each book to 25% of the row minus the gap */
+}
+
+.book-description {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 3cm; /* same as image width */
+    gap: 3px;
+}
+
+.book-description h2 {
+    margin: 3; 
+    font-size: 12px;
+    display: flex; 
+    align-items:flex-start; 
+    gap: 8px; /* Space between the title and the icon */
+}
+
+.book-description p {
+    margin: -8px 0 0 0;
+    font-size: 12px;
+}
+.book-description span {
+    flex-shrink: 0; 
+}
+a:link, a:visited {
+    text-decoration: none; 
+    color: white; 
+}
+
+/*search bar*/
+.material-symbols--search {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14'/%3E%3C/svg%3E");
+    background-color: #002809;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.material-symbols--search:hover {
+    color: #0e471b; ; 
+    cursor: pointer; 
+    transform: scale(1.05); 
+}
+
+.second-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: 10cm;
+    height: 30px;
+    margin-top: 80px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.second-search-bar input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: none;
+    width: 100%;  /* Make sure the input takes up available space */
+    padding-left: 10px; /* Add space for the icon */
+}
+
+.second-search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.second-search-bar:hover {
+    background-color: rgb(240, 234, 234);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.second-search-bar input:hover {
+    color: #366816;
+}
+
+
+  
