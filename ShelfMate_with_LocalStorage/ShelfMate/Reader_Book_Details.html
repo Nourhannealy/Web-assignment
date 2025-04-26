@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book details</title>
+        <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
+        <Link rel="stylesheet"  href="Styles/Reader_Side_Nav.css">
+        <link rel="stylesheet" href="Styles/Nav_Bar.css">
+        <link rel="stylesheet" href="Styles/Reader_Book_Details.css">
+        <link rel="stylesheet" href="Styles/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    </head>
+    <body >
+     <!--Navigation bar icons-->
+        <nav class="navbar">
+            <a href="Reader_Nav_Bar.html">          
+                <i class="mingcute--book-5-line"></i>
+                <span class="menu">Menu</span>
+            </a>
+            <a href="#" class="searchbar-container">
+                <i class="material-symbols--search-rounded "></i>
+                <span class="Search">Search</span>
+                <form class="search-bar">
+                    <i class="material-symbols--search"></i>
+                    <input type="text" placeholder="Search" name="search">
+                    <button type="submit" ></button>
+                </form>
+                </a>
+        
+        
+            <div class="dropdown status-dropdown">
+                <a href="Reader_Book_Status.html" >
+                    <i class="mdi--book-cog-outline"></i>
+                    <span class="status">Status</span>
+                </a>
+                    <div class="dropdown-content">
+                        <a href="Reader_Book_Status.html">Borrowed</a>
+                        <a href="Reader_Book_Status.html">Not Completed</a>
+                        <a href="Reader_Book_Status.html">Completed</a>
+                        <a href="Reader_Book_Status.html">Favorites</a>
+                    </div>
+            </div>
+                
+            <a href="Adming_Landing_books.html">
+                <i class="mingcute--book-6-line"></i>
+                <span class="books">Books</span>
+            </a>
+            <div class="dropdown  profile-dropdown">
+                <a href="Reader_Profile.html">
+                    <i class="iconamoon--profile-fill"></i>
+                    <span class="profile">Profile</span>
+                </a>
+                    
+                <div class="dropdown-content ">
+                    <a href="#">Settings</a>
+                    <a href="Login.html">Log Out</a>
+                </div>
+                
+            </div>   
+        </nav>
+
+        <br>
+        <br>
+        <section>
+            
+            <div class="container">
+            
+                <!--Book cover-->
+                <div class="book-cover">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1610730335i/53086843.jpg" alt="You've Reached Sam book cover">
+                </div>
+            
+                <div class="book-details">
+
+                    <input type="checkbox" id="heart-toggle" class="icon-toggle-checkbox" hidden>
+                    <label for="heart-toggle" class="icon-toggle">
+                        <div class="famicons--heart-outline"></div>
+                        <div class="famicons--heart"></div>
+                    </label>
+                
+                    <h1>You've Reached Sam</h1>
+                    <p><u>Romance</u> | <u>Drama</u> | <u>Loss</u></p>
+                
+
+                    <div class="border-box">
+                        <p><a href="https://www.google.com/search?q=Dustin+Thao&oq=Dustin+Thao&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEC4YQNIBCDI4OTRqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8" id="Authorname">Dustin Thao</a></p> 
+                        <p id="Author">Author</p>
+                    </div>
+            
+                    <br>
+                    <p>18 Chapters</p>
+
+                    <br>
+
+                    <!--Available or Unavailabe-->
+                    <div class="availability">
+                        <span class="mynaui--book-check"></span>
+                        <span class="availability-text">Available</span>
+                    </div>
+                    
+                    
+            
+                </div>
+            </div>
+
+            <!--Description-->
+            <div class="book-description">
+                <h1>About Book</h1>
+                <div class="about-book">
+                    <p>What would you do if you had a second chance at goodbye?</p>
+                    <p>
+                        Filled with a diverse cast of characters, the heartache of first love and loss, 
+                        and the kind of friends that can get you through anything, plus a touch of magic, 
+                        You've Reached Sam will make an instant connection with anyone looking for a 
+                        big emotional romance of a read.
+                    </p>
+                </div>
+
+                <div class="button-container">
+                    <button class="button" onclick="showBorrowAlert()">Borrow</button>
+                </div>
+                
+            </div>
+            
+            <div id="customAlert" class="custom-alert">
+                <div class="alert-box">
+                    <p id="alertMessage">Are you sure?</p>
+                    <div class="alert-buttons">
+                        <button id="alertCancelBtn">Cancel</button>
+                        <button id="alertConfirmBtn">OK</button>
+                    </div>
+                </div>
+            </div>
+            
+    
+        </section>
+
+        <script src="JavaScript/Reader_book_details.js">
+       
+        </script>
+        
+        <footer>
+            <div class="footer-container">
+              <div class="footer-section">
+                <h3>ShelfMate</h3>
+                <p>Choose your story , Choose your journey</p>
+              </div>
+          
+              
+          
+              <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@onlinelibrary.com</p>
+              </div>
+          
+              <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                  <span class="ic--baseline-facebook"></span>
+                  <span class="carbon--logo-x"></span>
+                  <span class="mdi--instagram"></span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="footer-bottom">
+              <p>&copy; 2025 Online Library. All rights reserved.</p>
+              <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        
+          </footer>
+
+    </body>
+
+</html>

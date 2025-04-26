@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+   
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Add Book</title>
+        <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
+        <link rel="stylesheet" href="Styles/Side_Nav.css">
+        <link rel="stylesheet" href="Styles/Nav_Bar.css">
+        <link rel="stylesheet" href="Styles/Admin_Landing_books.css">
+        <link rel="stylesheet" href="Styles/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+       </head>
+   
+    <body>
+    <!--Navigation bar icons-->
+    <div class="logo-exit">
+      <img src="Library web/ShelfMate-logo.png" alt="logo" class="Main-logo" >
+      <a href="">
+        <i class="streamline--delete-1-solid"></i>
+       </a>
+    </div>
+  <nav class="navbar">
+      <a href="Adming_Landing_books.html">
+          <i class="mingcute--book-6-line"></i>
+          <span class="books">Books</span>
+      </a>
+      
+        <a href="#" class="searchbar-container">
+          <i class="material-symbols--search-rounded "></i>
+          <span class="Search">Search</span>
+          <form class="search-bar">
+              <i class="material-symbols--search"></i>
+              <input type="text" placeholder="Search" name="search">
+              <button type="submit" ></button>
+          </form>
+            </a>
+          <a href="Admin_Add_Book.html">
+          <i class="line-md--plus"></i>
+          <span class="add">Add Book</span>
+          </a>
+            
+                <div class="dropdown  profile-dropdown">
+                    <a href="Admin_Profile.html">
+                        <i class="iconamoon--profile-fill"></i>
+                        <span class="profile">Profile</span>
+                    </a>
+                        
+                    <div class="dropdown-content ">
+                        <a href="Admin_Profile.html">Settings</a>
+                        <a href="Login.html">Log Out</a>
+                    </div>
+                    
+                </div>  
+            
+            </nav>
+            <nav class="side-bar">
+                  
+                <!-- <div class="overlay"> -->
+                  <div>
+
+                  
+                
+                <a href="Admin_Add_Book.html" class="side-icon">
+                    <i class="line-md--plus icon"></i>
+                    <p class="names">Add New Book</p>
+                  </a>
+            
+
+              
+                <a href="Adming_Landing_books.html"class="side-icon">
+                    <i class="mingcute--book-6-line icon"></i>
+                    <p class="names">View Available Books</p> 
+                </a>
+
+              
+              
+                <a href="Admin_Profile.html"class="side-icon">
+                    
+                    <i class="iconamoon--profile-fill icon" ></i>
+                    <p class="names">Profile</p>
+                </a>
+                
+                  
+              
+            
+                <a href="Page1_Start.html" class="side-icon">
+                    <i class="iconamoon--logout icon "></i>
+                    <p class="names">LogOut</p>
+                </a>
+               
+            </nav>
+        
+        <h1>Welcome "name" to ShelfMate</h1>
+  
+        <main>
+
+
+            <div class="top-header">
+                <h2>Available Books</h2>
+                <div class="icon-row">
+
+                  <div class="search-container" id="searchContainer">
+                    <span class="material-symbols--search" id="searchIcon" onclick="expandSearch()"></span>
+                    <input type="text" placeholder="Search..." id="searchInput" />
+                  </div>
+
+                 <div class="sort-dropdown">
+                    <span class="material-symbols--sort" onclick="toggleSortMenu()" title="Sort"></span>
+                    
+                    <div class="sort-menu" id="sortMenu">
+                      <button>Date</button>
+                      <button>ID</button>
+                    </div>
+
+                  </div>
+
+                </div>
+            </div>
+
+            <div class="book-row"></div>
+            
+          </main>       
+
+          <!-- The javascript file links -->
+          <script src="JavaScript/Books_Data.js"></script>
+          <script src="JavaScript/Adming_Landing_books.js"></script>
+          <script src="JavaScript/Reader_Book_Search.js"></script>
+          
+           
+          <footer>
+            <div class="footer-container">
+              <div class="footer-section">
+                <h3>ShelfMate</h3>
+                <p>Choose your story , Choose your journey</p>
+              </div>
+
+              <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@onlinelibrary.com</p>
+              </div>
+          
+              <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                  <span class="ic--baseline-facebook"></span>
+                  <span class="carbon--logo-x"></span>
+                  <span class="mdi--instagram"></span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="footer-bottom">
+              <p>&copy; 2025 Online Library. All rights reserved.</p>
+              <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        
+          </footer>
+    
+    </body>
+    
+    </html>
+    
+    
