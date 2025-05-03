@@ -43,27 +43,15 @@
         </div>
      
 
-
-
         <div class="book-row"></div>
-        <script src="JavaScript/Reader_page.js"></script>
-        <script src="JavaScript/Reader_Book_Search.js"></script>
-        <script src="JavaScript/Books_Data.js"></script>
-        <script src="JavaScript/Reader_Landing_books.js"></script>
-<!--The Javascript code is here-->        
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const user = JSON.parse(localStorage.getItem("userProfile"));
-      if (user && user.name) {
-        document.querySelector("h1").innerHTML = `Welcome ${user.name} to ShelfMate`;
-      }
-    });
-  </script>
-
-<!----------------------------------->
       </main>     
       <div id="Assistant"></div>
       <div id="footer"></div>
+
+      <script src="JavaScript/Reader_page.js"></script>
+      <script src="JavaScript/Reader_Book_Search.js"></script>
+      <script src="JavaScript/Books_Data.js"></script>
+      <script src="JavaScript/Reader_Landing_books.js"></script>
 
 </body>
 
