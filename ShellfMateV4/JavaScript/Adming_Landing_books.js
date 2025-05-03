@@ -42,3 +42,9 @@ function displayBooks() {
   }
   // Call the function to display books on page load
   window.addEventListener('DOMContentLoaded', displayBooks);
+  document.addEventListener("DOMContentLoaded", function () {
+    const user = JSON.parse(localStorage.getItem("userProfile"));
+    if (user && user.name) {
+      document.querySelector("h1").innerHTML = `Welcome ${user.name} to ShelfMate`;
+    }
+  }); 
