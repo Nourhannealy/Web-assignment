@@ -85,7 +85,7 @@ span{
 /* Sidebar hover styling (override for sidebar links) */
 .side-bar span:hover {
   background-image: none !important;
-  /* -webkit-background-clip: initial !important; */
+  -webkit-background-clip: initial !important;
   -webkit-text-fill-color: #2E1703 !important; 
   cursor: pointer;
   transition: 0.3s;
@@ -101,7 +101,7 @@ span{
   font-size: 20px;
   background-size: 200% 100%;
   background-position: -100%;
-  /* -webkit-background-clip: text; */
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
   padding: 5px 0;
