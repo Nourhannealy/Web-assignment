@@ -90,7 +90,7 @@ a span {
   font-size: 24px;
   background-size: 200% 100%;
   background-position: -100%;
-  /* -webkit-background-clip: text; */
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
   padding: 5px 0;
