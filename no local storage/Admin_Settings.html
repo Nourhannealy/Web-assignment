@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
     <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
-    <link rel="stylesheet" href="Styles/Side_Nav.css">
+    <Link rel="stylesheet"  href="Styles/AI_assistant.css">
+    <Link rel="stylesheet"  href="Styles/Side_Nav.css">
     <link rel="stylesheet" href="Styles/Nav_Bar.css">
-    <link rel="stylesheet" href="./Styles/Settings.css">
+    <link rel="stylesheet" href="./Styles/Settings.css">    
     <link rel="stylesheet" href="Styles/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-      <div id="navbar"></div>
+    <div id="navbar"></div>
 
     <div class="settings-container">
         <h2>Settings</h2>
@@ -22,12 +23,12 @@
 
         <p>
             <label for="username">Display Name:</label><br>
-            <input type="text" id="username" placeholder="Enter New Username" required autocomplete="off" />
+            <input type="text" id="username" placeholder="Nour Hany Salem" disabled autocomplete="off" />
         </p>
 
         <p>
             <label for="email">Email Address:</label><br>
-            <input type="email" id="email" placeholder="Enter New Email" required autocomplete="off" />
+            <input type="email" id="email" placeholder="lojinsadek@gmail.com" disabled autocomplete="off" />
         </p>
 
         <p>
@@ -58,9 +59,10 @@
             </select>   
 
         </p>
-
+        
         <p>
-            <button type="submit">Save Changes</button>
+            <button type="submit" class="saveButton" id="editBtn">Edit</button>
+            <div id="toast" class="custom-toast">Changes saved!</div>
             <button type="button">Log Out</button>
         </p>
 
@@ -74,8 +76,9 @@
     </div>
   </div>
   
+    <div id="Assistant"></div>
     <div id="footer"></div>
-    <script src="JavaScript/Admin_page.js"></script>
+    <script src="JavaScript/Reader_page.js"></script>
     <script src="./JavaScript/Settings.js"></script>
 
     
