@@ -23,12 +23,12 @@
 
         <p>
             <label for="username">Display Name:</label><br>
-            <input type="text" id="username" placeholder="Enter New Username" required autocomplete="off" />
+            <input type="text" id="username" placeholder="Nour Hany Salem" disabled autocomplete="off" />
         </p>
 
         <p>
             <label for="email">Email Address:</label><br>
-            <input type="email" id="email" placeholder="Enter New Email" required autocomplete="off" />
+            <input type="email" id="email" placeholder="lojinsadek@gmail.com" disabled autocomplete="off" />
         </p>
 
         <p>
@@ -59,9 +59,10 @@
             </select>   
 
         </p>
-
+        
         <p>
-            <button type="submit">Save Changes</button>
+            <button type="submit" class="saveButton" id="editBtn">Edit</button>
+            <div id="toast" class="custom-toast">Changes saved!</div>
             <button type="button">Log Out</button>
         </p>
 
