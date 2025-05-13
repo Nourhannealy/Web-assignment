@@ -4,10 +4,21 @@ body {
     margin: 30px;
 }
 
+.iconamoon--profile-fill{
+  background-color: rgb(8, 49, 8);
+}
+.profile {
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #013220;
+  background-image: none;
+}
+
 h2 {
     text-align: center;
     color: white;
-    font-family: Arial;
+    font-family: 'Lora';
+    margin-top: 10%;
+    font-size: 40px;
 }
 
 form {
@@ -20,15 +31,13 @@ form {
     color: white;   
 }
 
-p {
-    margin-bottom: 20px;
-}
-
 label {
     font-weight: bold;
     display: block;
-    margin-bottom: 3px;
+    margin-top: 20px;
+    margin-bottom: -15px;
 }
+
 
 input[type="text"],
 input[type="email"],
