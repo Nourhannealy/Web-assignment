@@ -24,14 +24,22 @@ document.addEventListener('DOMContentLoaded', function () {
         const notifications = document.getElementById('notifications').value;
         const sound = soundSelect ? soundSelect.value : 'chime';
 
-        // ✅ Validate email
+        // ✅ Validate email only when the user clicks "Save Changes"
+          if (isEditing && editBtn.textContent === "Save Changes") {
+        if (!validateEmail(email)) {
+            showAlert("Please enter a valid email address.");
+            return;
+        }
+    }
+
         if (!validateEmail(email)) {
             showAlert("Please enter a valid email address.");
             return;
         }
 
         applyTheme(theme);
-        showAlert("Settings saved successfully!");
+        if (editBtn.textContent === "Edit" ){
+        showAlert("Settings saved successfully!");}
     });
 
     // 🎨 Change theme live when selected
@@ -68,9 +76,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ✅ Email validation
     function validateEmail(email) {
-        const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return pattern.test(email);
-    }
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return pattern.test(email);
+}
+
 
     // ✅ Alert box display (requires HTML element with id="custom-alert")
     function showAlert(message, callback) {
@@ -91,5 +100,40 @@ document.addEventListener('DOMContentLoaded', function () {
             alert(message);
             if (callback) callback();
         }
+    }
+
+    const editBtn = document.getElementById('editBtn');
+    const inputs = form.querySelectorAll('input, select');
+    let isEditing = false;
+
+    // Set initial state: disable all inputs except theme, notifications, and sound
+    inputs.forEach(input => {
+        if (input.id !== 'theme' && input.id !== 'notifications' && input.id !== 'sound') {
+            input.disabled = true;
+        }
+    });
+
+    editBtn.addEventListener('click', () => {
+        isEditing = !isEditing;
+
+        if (isEditing) {
+            // Enable all inputs for editing
+            inputs.forEach(input => input.disabled = false);
+            editBtn.textContent = "Save Changes";
+        } else {
+            // Save logic could be enhanced (e.g., saving to localStorage or server)
+            inputs.forEach(input => input.disabled = true);
+            editBtn.textContent = "Edit";
+            showToast("Changes saved!");
+        }
+    });
+
+    function showToast(message) {
+        const toast = document.getElementById("toast");
+        toast.textContent = message;
+        toast.style.display = "block";
+        setTimeout(() => {
+            toast.style.display = "none";
+        }, 3000);
     }
 });
