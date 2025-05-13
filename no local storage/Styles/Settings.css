@@ -10,6 +10,7 @@ body {
 
 .profile {
     -webkit-background-clip: unset;
+background-clip: unset;
     -webkit-text-fill-color: #013220;
     background-image: none;
 }
@@ -32,7 +33,14 @@ h2 {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     color: white;
 }
-
+/* .username, .email{
+ width:300px;
+ height:30px;
+ margin-top:2px ;
+ border-radius: 2px;
+ border: none;
+ outline: #603919;
+}  */
 .settings-container label {
     font-weight: bold;
     display: block;
@@ -43,6 +51,7 @@ h2 {
 .settings-container input[type="text"],
 .settings-container input[type="email"],
 .settings-container select {
+  background-color: white;
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -52,13 +61,42 @@ h2 {
 
 .settings-container button {
     color: white;
-    padding: 12px;
+    padding: 10px 20px;
     border: none;
     border-radius: 20px;
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+
+/* .saveButton{
+ border:none;
+ border-radius: 15px;
+ background-color: rgb(8, 49, 8);
+ font-size: 14px;
+ font-weight: 500;
+ margin-left: 5px;
+ margin-top: 15px;
+ padding: 100px 8px;
+ color: white;
+ cursor: pointer;
+} */
+
+
+.custom-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #412207;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: none;
+  z-index: 1000;
 }
 
 .settings-container button[type="submit"] {
@@ -77,7 +115,8 @@ h2 {
     background-color: #d10303;
 }
 
-.settings-container input:hover::placeholder,
+
+.settings-container input[read-only]:hover::placeholder,
 .settings-container textarea:hover::placeholder,
 .settings-container select:hover::placeholder {
     color: transparent;
@@ -86,12 +125,12 @@ h2 {
 /* Default Theme (Light is default styling) */
 body.light {
     background-color: #502C0E;
-    color: white;
+    
 }
 
 form.light {
     background-color: #956034;
-    color: white;
+    
 }
 
 /* Dark Theme */
