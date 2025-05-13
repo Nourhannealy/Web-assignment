@@ -45,6 +45,14 @@
           </main>       
 
           <div id="footer"></div>
+          <script>
+             document.addEventListener("DOMContentLoaded", function () {
+               const user = JSON.parse(localStorage.getItem("userProfile"));
+               if (user && user.name) {
+                 document.querySelector("h1").innerHTML = `Welcome ${user.name} to ShelfMate`;
+               }
+             });
+         </script>
 
           <!-- The javascript file links -->
           <script src="JavaScript/Admin_page.js"></script>
