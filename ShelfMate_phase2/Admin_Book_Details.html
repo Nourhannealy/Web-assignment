@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <head>
+        <title>Book details</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
+        <link rel="stylesheet" href="Styles/Side_Nav.css">
+        <link rel="stylesheet" href="Styles/Nav_Bar.css">
+        <link rel="stylesheet" href="Styles/Admin_Book_Details.css">
+        <link rel="stylesheet" href="Styles/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <!--Navigation bar icons-->
+    <div id="navbar"></div>
+        <br>
+        <br>
+        <section>
+            
+            <div class="container">
+            
+                <!--Book cover-->
+                <div class="book-cover">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1610730335i/53086843.jpg" alt="You've Reached Sam book cover">
+                </div>
+            
+                <div class="book-details">
+
+                    <!--Delete & edit icons-->
+                    <a class="basil--edit-solid" href="Admin_Edit_Book.html"></a>
+                    <a class="lets-icons--trash-light" href="javascript:void(0);" onclick="showDeleteAlert()"></a>
+                        
+                
+                    <h1 id="book-title">You've Reached Sam</h1>
+                    <p><u>Romance</u> | <u>Drama</u> | <u>Loss</u></p>
+                
+
+                    <div class="border-box">
+                        <p><a href="https://www.google.com/search?q=Dustin+Thao&oq=Dustin+Thao&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEC4YQNIBCDI4OTRqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8" id="Authorname">Dustin Thao</a></p> 
+                        <p id="Author">Author</p>
+                    </div>
+            
+                    <br>
+                    <p>18 Chapters</p>
+            
+                </div>
+            </div>
+
+            <!--Description-->
+            <div class="book-description">
+                <h1>About Book</h1>
+                <div class="about-book">
+                    <p>What would you do if you had a second chance at goodbye?</p>
+                    <p>
+                        Filled with a diverse cast of characters, the heartache of first love and loss, 
+                        and the kind of friends that can get you through anything, plus a touch of magic, 
+                        You've Reached Sam will make an instant connection with anyone looking for a 
+                        big emotional romance of a read.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <div id="customAlert" class="custom-alert">
+            <div class="alert-box">
+                <p id="alertMessage">Are you sure you want to delete this book?</p>
+                <div class="alert-buttons">
+                    <button onclick="closeAlert()">No</button>
+                    <!--EACH BOOK HAS IT'S ID IN THE LOCAL STORAGE, WE USE THE ID HARDCODED TEMORORARY-->
+                    <button onclick="deleteBook(7)">Yes</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+          <script src="JavaScript/Admin_Page.js"></script>
+          <script src="JavaScript/Admin_book_Details.js"></script>
+    </body>
+
+</html>

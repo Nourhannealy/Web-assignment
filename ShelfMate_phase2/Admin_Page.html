@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Search</title> 
+        <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
+        <Link rel="stylesheet"  href="Styles/Side_Nav.css">
+        <link rel="stylesheet" href="Styles/Nav_Bar.css">
+        <link rel="stylesheet" href="Styles/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+    <!--Navigation bar-->
+    <div class="overlay"></div>
+    <nav class="navbar">
+      <a class="menu-content" >
+        <i class="mingcute--book-5-line"></i>
+        <span class="menu">Menu</span>
+      </a>  
+
+      <a class="searchbar-container"> 
+        <i class="material-symbols--search-rounded "></i>
+        <span class="Search">Search</span>
+        <form class="search-bar">
+            <i class="material-symbols--search"></i>
+            <input type="text" id="search-bar-1" placeholder="Search..." name="search">
+            <button type="submit" id="search-btn1"></button>
+        </form>
+    </a>
+    
+        <a href="Admin_Add_Book.html" >
+          <i class="line-md--plus"></i>
+          <span class="add">Add Book</span>
+        </a>
+
+          
+      <a href="Adming_Landing_books.html">
+          <i class="mingcute--book-6-line"></i>
+          <span class="books">Books</span>
+      </a>
+
+      <div class="dropdown  profile-dropdown">
+        <a href="Admin_Profile.html">
+            <i class="iconamoon--profile-fill"></i>
+            <span class="profile">Profile</span>
+        </a>
+              
+        <div class="dropdown-content ">
+            <a href="Admin_Profile.html">Settings</a>
+            <a href="Page1_Start.html">Log Out</a>
+        </div>
+          
+      </div>   
+    </nav>
+    <!-- Sidebar -->
+    <nav class="side-bar">
+      <div class="logo-exit">
+        <img src="Library%20web/ShelfMate-logo.png" alt="logo" class="logo">
+        <a href="">
+          <i class="streamline--delete-1-solid"></i>
+        </a>
+      </div>
+      <a href="Admin_Add_Book.html" class="side-icon">
+        <i class="line-md--plus icon"></i>
+        <span class="name">Add Book</span>
+      </a>
+
+      <a href="Adming_Landing_books.html" class="side-icon">
+        <i class="mingcute--book-6-line icon-small  icon"></i>
+        <span class="name"> Books</span> 
+      </a>
+
+      <a href="Admin_Profile.html" class="side-icon">    
+        <i class="iconamoon--profile-fill icon-small icon"></i>
+        <span class="name">Profile</span>
+      </a>
+          
+      <a href="Page1_Start.html" class="side-icon">
+        <i class="majesticons--logout-line icon-small icon"></i>
+        <span class="name">LogOut</span>
+      </a>
+    </nav>
+  
+
+
+    <!--Footer-->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>ShelfMate</h3>
+          <p>Choose your story , Choose your journey</p>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: <a href="mailto:support@onlinelibrary.com">support@onlinelibrary.com</a></p>
+        </div>
+              
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://facebook.com/YourLibrary" class="ic--baseline-facebook"></a>
+            <a href="https://twitter.com/YourLibrary" class="carbon--logo-x"></a>
+            <a href="https://instagram.com/YourLibrary" class="mdi--instagram"></a>
+          </div>          
+        </div>
+      </div>
+              
+      <div class="footer-bottom">
+        <p>&copy; 2025 Online Library. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+              
+    </footer>
+
+    </body>
+</html>
