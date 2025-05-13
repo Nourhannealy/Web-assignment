@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+   
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Books</title>
+        <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
+        <link rel="stylesheet" href="Styles/Side_Nav.css">
+        <link rel="stylesheet" href="Styles/Nav_Bar.css">
+        <link rel="stylesheet" href="Styles/Admin_Landing_books.css">
+        <link rel="stylesheet" href="Styles/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+       </head>
+   
+    <body>
+      <div id="navbar"></div>
+        
+        <h1>Welcome "name" to ShelfMate</h1>
+  
+        <main>
+
+
+            <div class="top-header">
+                <h2>Available Books</h2>
+                <div class="icon-row">
+
+                 <div class="sort-dropdown">
+                    <span class="material-symbols--sort" onclick="toggleSortMenu()" title="Sort"></span>
+                    
+                    <div class="sort-menu" id="sortMenu">
+                      <button>Date</button>
+                      <button>ID</button>
+                    </div>
+
+                  </div>
+
+                </div>
+            </div>
+
+            <div class="book-row"></div>
+            <div class="book-description"></div>
+          </main>       
+
+          <div id="footer"></div>
+
+          <!-- The javascript file links -->
+          <script src="JavaScript/Admin_page.js"></script>
+          <script src="JavaScript/Adming_Landing_books.js"></script>
+          <script src="JavaScript/Reader_Book_Search.js"></script>
+          
+    
+    </body>
+    
+    </html>
+    
+    

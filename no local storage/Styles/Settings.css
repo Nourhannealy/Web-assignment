@@ -1,0 +1,149 @@
+body {
+    font-family: Lora, Arial;
+    background-color: #502C0E;
+    margin: 30px;
+}
+
+.iconamoon--profile-fill {
+    background-color: rgb(8, 49, 8);
+}
+
+.profile {
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #013220;
+    background-image: none;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-family: 'Lora';
+    margin-top: 10%;
+    font-size: 40px;
+}
+
+/* Only scope these rules to the settings form container */
+.settings-container form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #956034;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.settings-container label {
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: -15px;
+}
+
+.settings-container input[type="text"],
+.settings-container input[type="email"],
+.settings-container select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.settings-container button {
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.settings-container button[type="submit"] {
+    background-color: #00491e;
+}
+
+.settings-container button[type="button"] {
+    background-color: #f44336;
+}
+
+.settings-container button[type="submit"]:hover {
+    background-color: #042e04;
+}
+
+.settings-container button[type="button"]:hover {
+    background-color: #d10303;
+}
+
+.settings-container input:hover::placeholder,
+.settings-container textarea:hover::placeholder,
+.settings-container select:hover::placeholder {
+    color: transparent;
+}
+
+/* Default Theme (Light is default styling) */
+body.light {
+    background-color: #502C0E;
+    color: white;
+}
+
+form.light {
+    background-color: #956034;
+    color: white;
+}
+
+/* Dark Theme */
+body.dark {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+form.dark {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Overlay container for alert */
+#custom-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#custom-alert.hidden {
+    display: none;
+}
+
+.alert-content {
+    background-color: #7a2f00;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+}
+
+#close-alert {
+    margin-top: 15px;
+    background-color: #00491e;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#close-alert:hover {
+    background-color: #042e04;
+}

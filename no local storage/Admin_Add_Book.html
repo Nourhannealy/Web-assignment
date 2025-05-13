@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+   
+    <head >
+        <meta charset="UTF-8">
+        <title>Admin Add Book</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="Library web/Favicon.png">
+        <link rel="stylesheet" href="Styles/Side_Nav.css">
+        <link rel="stylesheet" href="Styles/Nav_Bar.css">
+        <link rel="stylesheet" href="Styles/Admin_Add_Book.css">
+        <link rel="stylesheet" href="Styles/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+       </head>
+   
+    <body>
+        <!--Navigation bar-->
+        <div id="navbar"></div>
+
+        <section class="Main_interface">
+            <div class="title_of_page">
+                    <p>Add New Book</p>
+            </div>
+           <div class="content_screen">
+                <div class="Tabs">
+                    <P class="input_title">Book ID</P>
+                    <input class="input_text" type="number"  >
+                </div>                
+                    
+                <div class="Tabs">
+                    <P class="input_title">Book Name</P>
+                    <input class="input_text" type="text" >
+                </div>            
+        
+                <div class="Tabs">
+                    <P class="input_title">Author</P>
+                    <input class="input_text" type="text"  >
+                </div>
+                
+        
+                <div class="Tabs">
+                     <P class="input_title">Category</P>
+                    <input class="input_text" type="text"  >
+                </div>    
+        
+                <div class="Tabs">
+                    <P class="input_title">Description</P>
+                    <input class="input_text" type="text"  >
+                </div>
+                <div >
+                    <P class="input_title">Upload Book Image</P>
+                    
+                    <input type="file" class="upload-button">
+                    <button type="submit" class="submit"><p>Save</p></button>
+                      
+                </div>
+           </div>
+           <div id="custom-alert" class="custom-alert hidden">
+            <div class="alert-content">
+              <p id="alert-message"></p>
+              <button id="close-alert">OK</button>
+            </div>
+          </div>
+        </section>
+        
+        <!--Footer-->
+        <div id="footer"></div>
+        <script src="JavaScript/Admin_page.js"></script>
+        <script src="JavaScript/admin_Add_Book.js"></script>
+    </body>
+</html>
