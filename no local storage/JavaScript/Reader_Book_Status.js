@@ -74,11 +74,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Attach event listeners
-    buttons.borrowed.addEventListener('click', () => displayBooks(book => book.borrowed, 'Reader_Completed_or_not.html'));
-    buttons.notCompleted.addEventListener('click', () => displayBooks(book => !book.completed));
-    buttons.completed.addEventListener('click', () => displayBooks(book => book.completed));
-    buttons.favorites.addEventListener('click', () => displayBooks(book => book.favourite));
+    buttons.borrowed.addEventListener('click', () => displayBooks(book => book.borrowed, 'Reader_Book_Return.html'));
+    buttons.notCompleted.addEventListener('click', () => displayBooks(book => !book.completed, 'Reader_Completed_or_not.html'));
+    buttons.completed.addEventListener('click', () => displayBooks(book => book.completed, 'Reader_Completed_or_not.html'));
+    buttons.favorites.addEventListener('click', () => displayBooks(book => book.favourite, <div class="famicons--heart" 
+
+        style="     .famicons--heart-outline.active {color: #74150F;}
+                    .icon-toggle-checkbox:checked + .icon-toggle .famicons--heart {
+                    display: inline-block;
+                    color: #74150F ;
+        }"></div>));
 
     // Default load: show borrowed books
-    displayBooks(book => book.borrowed, 'Reader_Completed_or_not.html');
+    displayBooks(book => book.borrowed, 'Reader_Book_Return.html');
 });
