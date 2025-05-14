@@ -39,10 +39,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     if (isValid) {
-      showAlert("Login successful!", () => {
-        form.submit(); 
-      });
+      const users = JSON.parse(localStorage.getItem("users")) || [];
+      const foundUser = users.find(user => user.email === email);
+    
+      if (!foundUser) {
+        showAlert("User not found. Please sign up first.");
+      } else if (foundUser.password !== password) {
+        showAlert("Incorrect password.");
+      } else {
+        showAlert("Login successful!", () => {
+          // Redirect by role
+          if (foundUser.role === "admin") {
+            window.location.href = "Adming_Landing_books.html";
+          } else {
+            window.location.href = "Reader_Landing_Book.html";
+          }
+        });
+      }
     }
+    
 
   });
 
