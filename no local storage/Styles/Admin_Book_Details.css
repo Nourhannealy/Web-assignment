@@ -76,6 +76,10 @@ body {
 .about-book{
   font-size: 24px;
 }
+.stock{
+  margin: 30px 0px;
+  font-weight: 600;
+}
 
 .lets-icons--trash-light {
   color: #002809;
@@ -113,6 +117,33 @@ body {
   cursor: pointer;
 }
 
+.mynaui--book-check {
+    display: inline-block;
+    color: #225204;
+    width: 40px;
+    height: 40px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='M5 20.25c0 .414.336.75.75.75h10.652C17.565 21 18 20.635 18 19.4v-1.445M5 20.25A2.25 2.25 0 0 1 7.25 18h10.152q.339 0 .598-.045M5 20.25V6.2c0-1.136-.072-2.389 1.092-2.982C6.52 3 7.08 3 8.2 3h9.2c1.236 0 1.6.437 1.6 1.6v11.8c0 .995-.282 1.425-1 1.555'/%3E%3Cpath d='m9.6 10.323l1.379 1.575a.3.3 0 0 0 .466-.022L14.245 8'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+
+  .availability {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color:#225204; /* or adjust based on your background */
+  }
+  
+  .availability-text {
+    font-weight: 500;
+  }
 
 /* delete alert styles */
 .custom-alert {
