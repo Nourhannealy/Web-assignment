@@ -23,19 +23,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const theme = themeSelect.value;
         const notifications = document.getElementById('notifications').value;
         const sound = soundSelect ? soundSelect.value : 'chime';
+        let gender = "";
+        if (document.getElementById("dot-1").checked) gender = "Male";
+        else if (document.getElementById("dot-2").checked) gender = "Female";
+        else if (document.getElementById("dot-3").checked) gender = "Prefer not to say";
 
         // ✅ Validate email only when the user clicks "Save Changes"
-          if (isEditing && editBtn.textContent === "Save Changes") {
+          if (isEditing && editBtn.textContent === "Edit") {
         if (!validateEmail(email)) {
             showAlert("Please enter a valid email address.");
             return;
         }
     }
-
-        if (!validateEmail(email)) {
-            showAlert("Please enter a valid email address.");
-            return;
-        }
 
         applyTheme(theme);
         if (editBtn.textContent === "Edit" ){
@@ -65,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
 
     // 🚪 Confirm before logging out
     logoutButton.addEventListener('click', function () {
