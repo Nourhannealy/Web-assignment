@@ -1,5 +1,5 @@
 body {
-    font-family: Lora, Arial;
+    font-family: 'Lora', Arial;
     background-color: #502C0E;
     margin: 30px;
 }
@@ -33,14 +33,7 @@ h2 {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     color: white;
 }
-/* .username, .email{
- width:300px;
- height:30px;
- margin-top:2px ;
- border-radius: 2px;
- border: none;
- outline: #603919;
-}  */
+
 .settings-container label {
     font-weight: bold;
     display: block;
@@ -51,7 +44,8 @@ h2 {
 .settings-container input[type="text"],
 .settings-container input[type="email"],
 .settings-container select {
-  background-color: white;
+    background-color: white;
+    outline: white;
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -71,33 +65,6 @@ h2 {
 }
 
 
-/* .saveButton{
- border:none;
- border-radius: 15px;
- background-color: rgb(8, 49, 8);
- font-size: 14px;
- font-weight: 500;
- margin-left: 5px;
- margin-top: 15px;
- padding: 100px 8px;
- color: white;
- cursor: pointer;
-} */
-
-
-.custom-toast {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #412207;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  display: none;
-  z-index: 1000;
-}
 
 .settings-container button[type="submit"] {
     background-color: #00491e;
@@ -120,6 +87,64 @@ h2 {
 .settings-container textarea:hover::placeholder,
 .settings-container select:hover::placeholder {
     color: transparent;
+}
+
+.label-with-optional {
+  display: flex;
+  align-items: center;
+  gap: 130px;
+}
+
+.optional {
+  font-size: 13px;
+  color: #d3c6b8;
+  font-style: italic;
+}
+
+.gender-title{
+font-size: 16px;
+font-weight: 500;
+}
+.gender-details .category{
+  display: flex;
+  width: 80%;
+  margin: 10px 0;
+  justify-content: space-between;
+  margin-left: -10px;
+  margin-top: 0px;
+}
+.gender-details .category label{
+display: flex;
+align-items: center;
+}
+
+.gender-details .category .dot{
+height: 9px;
+width: 9px;
+background-color: #c9a689;
+border-radius: 50%;
+margin-right: 5px;
+margin-left: 15px;
+border: 5px solid transparent;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+  border-color: #c9a689;
+  background: #502C0E;
+}
+input[type="radio"]{
+  display: none;
+}
+
+select:disabled,
+#username:disabled,
+#email:disabled {
+  background-color: #d8d8d8; 
+  initial-value: #ccc;               
+  opacity: 1;                
+  cursor: not-allowed;        
 }
 
 /* Default Theme (Light is default styling) */
