@@ -1,0 +1,333 @@
+body {
+    font-family: "Lora";
+}
+
+.side-home{
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #2E1703 !important;
+  background-image: none !important;
+}
+.mynaui--home.side-home{
+  background-color:  #2E1703;
+}
+h1 {
+  margin-top: 8%;
+  margin-bottom: 3%;
+  text-align: center;
+  font-size:3em;
+  font-style: "Lora";
+}
+
+h3{
+    margin-top: 0;
+    font-size:2em;
+}
+
+button{
+    background-color: transparent;
+    border: 2px solid #956034;
+    color: white;
+    border-radius: 17px;    
+    font-family: "Lora";
+}
+
+/* Book status buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px; 
+}
+
+.buttons button {
+    padding: 5px 15px; 
+    font-size: 1.4em; 
+}
+
+.buttons button:hover {
+    background-color: #956034;
+    cursor: pointer;
+}
+
+/* Admin search bar buttons */
+.buttons2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px; 
+}
+
+.buttons2 button {
+    padding: 5px 25px; 
+    font-size: 1.6em; 
+}
+
+.buttons2 button:hover {
+    background-color: #956034;
+    cursor: pointer;
+}
+
+main {
+    margin-top: 25px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #956034;
+    border-radius: 15px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%; 
+    overflow-y: auto; 
+}
+
+main::-webkit-scrollbar-track {
+    background-color:transparent; 
+}
+
+main::-webkit-scrollbar {
+    width: 8px; /*this is the thicknes*/
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: #002809;
+    border-radius: 15px; 
+}
+
+main::-webkit-scrollbar-thumb:hover {
+    background-color: #0e471b; 
+}
+
+img{
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+img:hover{
+    transform: scale(1.05);
+    cursor: pointer; 
+}
+
+
+
+.book-row {
+    display: flex;
+    flex-wrap: wrap; /*Allows wrapping ,so after 5 books are in a row it goes down another row */
+    justify-content: flex-start; 
+    gap: 3%;/*space between the books */
+}
+
+@media (max-width: 1100px) {
+  .book-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    justify-content: space-around; /* Spread books evenly */
+    gap: 16px; /* Add spacing between books */
+  }
+
+  .book-container {
+    flex: 0 1 calc(60% - 20px); /* Two books per row on small screens */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+.book-description{
+  font-size: 40px;
+}
+
+}
+
+.book-container {
+    display: flex;
+    flex-direction: column; 
+    width: calc(20% - 3%);  /*Set the width of each book to 20% of the row minus the gap */
+}
+
+.book-description {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 80%; /* same as image width */
+    gap: 1%;
+    margin-bottom: 15px;
+}
+
+.book-description h2 {
+    margin-bottom: 10px; 
+    font-size: 14px;
+    display: flex; 
+    align-items:flex-start; 
+    gap: 8px; /* Space between the title and the icon */
+}
+
+.book-description p {
+    margin: -8px 0 0 0;
+    font-size: 12px;
+}
+.book-description span {
+    flex-shrink: 0; 
+}
+
+a:link, a:visited {
+  text-decoration: none; 
+  color: white; 
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    padding-top: 0;
+  }
+  
+  .top-header h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    
+  }
+  
+  .icon-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+
+  .sort-dropdown {
+    position: relative;
+  }
+  
+  .material-symbols--sort {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    cursor: pointer;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 24 24'%3E%3Cpath d='M3 18h6v-2H3v2zm0-5h12v-2H3v2zm0-7v2h18V6H3z'/%3E%3C/svg%3E");
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    transition: background-color 0.3s ease;
+
+  }
+  
+  .sort-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: #703d1f;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    flex-direction: column;
+  }
+  
+  .sort-menu button {
+    background-color: #884f24;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin: 3px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+  }
+  
+  .sort-menu button:hover{
+
+    background-color: #B5672F; 
+  transform: scale(1.05);  
+  color: #fffbea;
+
+  }
+
+
+  .material-symbols--sort:hover {
+    cursor: pointer; 
+    transform: scale(1.05);
+    background-color: #0a3105; 
+
+    ;
+  }
+
+
+
+  .material-symbols--search {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 8px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14'/%3E%3C/svg%3E");
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 30px;
+    transition: width 0.4s ease;
+    overflow: hidden;
+    margin-top: -5;
+  }
+  
+  .search-container input {
+    width: 0;
+    opacity: 0;
+    padding: 6px 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: rgb(208, 204, 204);
+    border-radius: 30px;
+    transition: width 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .search-container.expanded input {
+    width: 200px;
+    opacity: 1;
+  }
+
+
+  .material-symbols--search:hover {
+    background-color: #0a3105; 
+    cursor: pointer; 
+    transform: scale(1.05); 
+}
+  
+  

@@ -1,0 +1,70 @@
+{% extends "Admin_Page.html" %}
+{% load static %}
+
+{% block title %}Admin Add Book{% endblock %}
+
+{% block content %}
+<section class="Main_interface">
+    <div class="title_of_page">
+        <p>Add New Book</p>
+    </div>
+    <div class="content_screen">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="Tabs">
+                <P class="input_title">{{ form.book_name.label }}</P>
+                {{ form.book_name }}
+                {{ form.book_name.errors }}
+            </div>            
+    
+            <div class="Tabs">
+                <P class="input_title">{{ form.author_name.label }}</P>
+                {{ form.author_name }}
+                {{ form.author_name.errors }}
+            </div>
+            
+            <div class="Tabs">
+                <P class="input_title">{{ form.category.label }}</P>
+                {{ form.category }}
+                {{ form.category.errors }}
+            </div>    
+    
+            <div class="Tabs">
+                <P class="input_title">{{ form.description.label }}</P>
+                {{ form.description }}
+                {{ form.description.errors }}
+            </div>
+            
+            <div class="Tabs last">
+                <div class="input_group">
+                    <p class="input_title page">{{ form.pages.label }}</p>
+                    {{ form.pages }}
+                    {{ form.pages.errors }}
+                </div>
+                <div class="input_group">
+                    <p class="input_title page">{{ form.Stock.label }}</p>
+                    {{ form.Stock }}
+                    {{ form.Stock.errors }}
+                </div>
+            </div>
+            
+            <div>
+                <P class="input_title">{{ form.image.label }}</P>
+                {{ form.image }}
+                {{ form.image.errors }}
+                <button type="submit" class="submit"><p>Save</p></button>
+            </div>
+        </form>
+    </div>
+    <div id="custom-alert" class="custom-alert hidden">
+        <div class="alert-content">
+            <p id="alert-message"></p>
+            <button id="close-alert">OK</button>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'JavaScript/Admin_page.js' %}"></script>
+<script src="{% static 'JavaScript/admin_Add_Book.js' %}"></script>
+{% endblock %}
