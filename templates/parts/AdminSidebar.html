@@ -1,0 +1,30 @@
+{% load static %}
+
+<!-- Sidebar -->
+        <nav class="side-bar">
+            <div class="logo-exit">
+                <img src="{% static 'Library web/ShelfMate-logo.png' %}" alt="logo" class="logo">
+                <a href="">
+                    <i class="streamline--delete-1-solid"></i>
+                </a>
+            </div>
+            <a href="{% url 'add_book' %}" class="side-icon">
+                <i class="line-md--plus icon"></i>
+                <span class="name">Add Book</span>
+            </a>
+
+            <a href="{% url 'admin_land_books' %}" class="side-icon">
+                <i class="mingcute--book-6-line icon-small icon"></i>
+                <span class="name">Books</span> 
+            </a>
+
+            <a href="{% url 'admin_profile' %}" class="side-icon">    
+                <i class="iconamoon--profile-fill icon-small icon"></i>
+                <span class="name">Profile</span>
+            </a>
+            
+            <a href="{% url 'start' %}" class="side-icon">
+                <i class="majesticons--logout-line icon-small icon"></i>
+                <span class="name">LogOut</span>
+            </a>
+        </nav>

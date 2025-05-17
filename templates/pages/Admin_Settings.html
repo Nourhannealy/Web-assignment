@@ -1,0 +1,97 @@
+{% extends "adminBase.html" %}
+{% load static %}
+
+{% block title %}Profile{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Styles/Settings.css' %}">  
+{% endblock extra_css %}
+
+
+{% block content %}
+    <div class="settings-container">
+        <h2>Settings</h2>
+         <form>
+
+        <p>
+            <label for="username">Display Name:</label><br>
+            <input type="text" id="username" value="Nour Hany Salem"  autocomplete="off" disabled/>
+        </p>
+
+        <p>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" value="lojinsadek@gmail.com"  autocomplete="off" disabled/>
+        </p>
+
+        <p>
+            <label for="theme">Theme:</label><br>
+            <select id="theme" name="theme" disabled>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="notifications">Notification Preferences:</label><br>
+            <select id="notifications" name="notifications" disabled>
+                <option value="all">All</option>
+                <option value="due">Due Date Reminders Only</option>
+                <option value="none">None</option>
+            </select>
+        </p>
+
+        <p>
+            
+            <label for="sound">Notification Sound:</label><br>
+            <select id="sound" name="sound" disabled>
+                <option value="chime">Chime</option>
+                <option value="bell">Bell</option>
+                <option value="ding">Ding</option>
+                <option value="none">None</option>
+            </select>   
+
+        </p>
+
+        <br>
+        
+        <div class="gender-details">
+                  <input type="radio" name="gender" id="dot-1" value="Male" disabled>
+                  <input type="radio" name="gender" id="dot-2" value="Female" disabled>
+                  <input type="radio" name="gender" id="dot-3" value="Prefer not to say" checked disabled>
+                     <span class="gender-title">Gender</span>
+                     <div class="category">
+                      <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                      </label>
+                      <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                      </label>
+                      <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefer not to say</span>
+                      </label>
+                     </div>
+                </div>
+        
+        <p>
+            <button type="submit" class="saveButton" id="editBtn">Edit</button>
+            <button type="button">Log Out</button>
+        </p>
+
+    </form>
+    </div>
+
+    <div id="custom-alert" class="custom-alert hidden">
+    <div class="alert-content">
+      <p id="alert-message"></p>
+      <button id="close-alert">OK</button>
+    </div>
+  </div>
+      
+{% endblock content %}
+{% block extra_scripts %}
+<script src="JavaScript/Admin_Page.js"></script>
+<script src="./JavaScript/Settings.js"></script>
+{% endblock extra_scripts %}

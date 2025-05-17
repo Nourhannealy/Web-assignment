@@ -1,0 +1,40 @@
+{% load static %}
+<!-- Navigation bar -->
+<div class="overlay"></div>
+<nav class="navbar">
+    <a class="menu-content">
+        <i class="mingcute--book-5-line"></i>
+        <span class="menu">Menu</span>
+    </a>  
+
+    <a class="searchbar-container"> 
+        <i class="material-symbols--search-rounded"></i>
+        <span class="Search">Search</span>
+        <form class="search-bar">
+            <i class="material-symbols--search"></i>
+            <input type="text" id="search-bar-1" placeholder="Search..." name="search">
+            <button type="submit" id="search-btn1"></button>
+        </form>
+    </a>
+
+    <a href="{% url 'add_book' %}">
+        <i class="line-md--plus"></i>
+        <span class="add">Add Book</span>
+    </a>
+
+    <a href="{% url 'admin_land_books' %}">
+        <i class="mingcute--book-6-line"></i>
+        <span class="books">Books</span>
+    </a>
+
+    <div class="dropdown profile-dropdown">
+        <a href="{% url 'admin_profile' %}">
+            <i class="iconamoon--profile-fill"></i>
+            <span class="profile">Profile</span>
+        </a>
+        <div class="dropdown-content">
+            <a href="{% url 'admin_settings' %}">Settings</a>
+            <a href="{% url 'start' %}">Log Out</a>
+        </div>
+    </div>
+</nav>

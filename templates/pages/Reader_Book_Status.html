@@ -1,0 +1,28 @@
+{% extends "readerBase.html" %}
+{% load static %}
+
+{% block title %}Book Status{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Styles/Reader_Book_Status_Search.css' %}">
+{% endblock extra_css %}
+
+{% block content %} 
+    <!--Book status page content-->
+    <h1 id="title">Book Status</h1>
+    <div class="buttons">
+        <button class="borrowed">Borrowed</button>
+        <button class="not-completed">Not Completed</button>
+        <button class="completed">Completed</button>
+        <button class="favorites">Favorites</button>
+    </div>
+    <main>
+        <div class="book-row"></div>
+    </main>
+
+{% endblock content %}  
+
+{% block extra_scripts %}
+    <script src="{% static 'JavaScript/Reader_page.js' %}"></script>
+    <script src="{% static 'JavaScript/Reader_Book_Status.js' %}"></script>
+{% endblock extra_scripts %}

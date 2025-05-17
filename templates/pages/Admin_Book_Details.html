@@ -1,0 +1,70 @@
+{% extends "adminBase.html" %}
+{% load static %}
+
+{% block title %}{{ book.title }}{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Styles/Admin_Book_Details.css' %}">
+{% endblock extra_css %}
+
+
+{% block content %}
+<section>
+    <div class="container">
+        <div class="book-cover">
+            <img src="{{ book.image.url }}" alt="{{ book.title }} book cover">
+        </div>
+
+        <div class="book-details">
+            <!-- Edit and delete icons -->
+            <a class="basil--edit-solid" href="{% url 'edit_book' %}"></a>
+            <a class="lets-icons--trash-light" href="javascript:void(0);" onclick="showDeleteAlert()"></a>
+
+            <h1 id="book-title">{{ book.title }}</h1>
+
+            <p>
+                {% for category in book.categories.all %}
+                    <u>{{ category.name }}</u>{% if not forloop.last %} | {% endif %}
+                {% endfor %}
+            </p>
+            
+            <div class="border-box">
+                <p><a href="https://www.google.com/search?q={{ book.author }}" id="Authorname">{{ book.author }}</a></p>
+                <p id="Author">Author</p>
+            </div>
+            <br>
+            <p>{{ book.chapters }} Chapters</p>
+            <br>
+            <p>{{ book.pages }} Pages</p>
+            <br>
+            <p class="stock">Left in Stock: {{ book.stock }}</p>
+            <br>
+            <p class="stock">Borrowed Count: {{ book.borrowedCount }}</p>                 
+        </div>
+    </div>
+
+    <!--Description-->
+    <div class="book-description">
+        <h1>About Book</h1>
+        <div class="about-book">
+            <p>{{ book.description|linebreaks }}</p>
+        </div>
+    </div>
+</section>
+
+<div id="customAlert" class="custom-alert">
+    <div class="alert-box">
+        <p id="alertMessage">Are you sure you want to delete this book?</p>
+        <div class="alert-buttons">
+            <button onclick="closeAlert()">No</button>
+           <button onclick="window.location.href='{% url 'delete_book' book.id %}'">Yes</button>
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block extra_scripts %}
+<script src="{% static 'JavaScript/Admin_Page.js' %}"></script>
+<script src="{% static 'JavaScript/Admin_Book_Details.js' %}"></script>
+{% endblock extra_scripts %}

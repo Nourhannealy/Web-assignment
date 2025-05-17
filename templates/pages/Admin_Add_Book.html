@@ -1,0 +1,60 @@
+{% extends "adminBase.html" %}
+{% load static %}
+
+{% block title %}Add Book{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Styles/Admin_Add_Book.css' %}"> 
+{% endblock extra_css %}
+{% block content %} 
+
+        <section class="Main_interface">
+            <div class="title_of_page">
+                    <p>Add New Book</p>
+            </div>
+           <div class="content_screen">
+                <div class="Tabs">
+                    <P class="input_title">Book ID</P>
+                    <input class="input_text" type="number"  >
+                </div>                
+                    
+                <div class="Tabs">
+                    <P class="input_title">Book Name</P>
+                    <input class="input_text" type="text" >
+                </div>            
+        
+                <div class="Tabs">
+                    <P class="input_title">Author</P>
+                    <input class="input_text" type="text"  >
+                </div>
+                
+        
+                <div class="Tabs">
+                     <P class="input_title">Category</P>
+                    <input class="input_text" type="text"  >
+                </div>    
+        
+                <div class="Tabs">
+                    <P class="input_title">Description</P>
+                    <input class="input_text" type="text"  >
+                </div>
+                <div >
+                    <P class="input_title">Upload Book Image</P>
+                    
+                    <input type="file" class="upload-button">
+                    <button type="submit" class="submit"><p>Save</p></button>
+                      
+                </div>
+           </div>
+           <div id="custom-alert" class="custom-alert hidden">
+            <div class="alert-content">
+              <p id="alert-message"></p>
+              <button id="close-alert">OK</button>
+            </div>
+          </div>
+        </section>
+{% endblock content %}        
+{% block extra_scripts %}
+<script src="{% static 'JavaScript/Admin_page.js' %}"></script>
+<script src="{% static 'JavaScript/admin_Add_Book.js' %}"></script>
+{% endblock extra_scripts %}

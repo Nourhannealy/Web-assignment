@@ -1,0 +1,35 @@
+{% load static %}
+<!-- Sidebar --> 
+<nav class="side-bar">
+  <div class="logo-exit">
+    <img src="{% static 'Library web/ShelfMate-logo.png' %}" alt="logo" class="logo" />
+    <a href="">
+      <i class="streamline--delete-1-solid"></i>
+    </a>
+  </div>
+
+  <a href="" class="side-icon">
+    <i class="proicons--search icon-small"></i>
+    <span>Search Books</span>
+  </a>
+
+  <a href="{% url 'reader_book_status' %}" class="side-icon">
+    <i class="mdi--book-cog-outline icon-small"></i>
+    <span>Book Status</span>
+  </a>
+
+  <a href="{% url 'reader_land_book' %}" class="side-icon">
+    <i class="mingcute--book-6-line icon-small"></i>
+    <span>Available Books</span> 
+  </a>
+
+  <a href="{% url 'reader_profile' %}" class="side-icon">    
+    <i class="iconamoon--profile-fill icon-small"></i>
+    <span>Profile</span>
+  </a>
+      
+  <a href="{% url 'start' %}" class="side-icon">
+    <i class="majesticons--logout-line icon-small"></i>
+    <span>LogOut</span>
+  </a>
+</nav>

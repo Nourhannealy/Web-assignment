@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'Library web/Favicon.png' %}" />
+  <link rel="stylesheet" href="{% static 'Styles/Login.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-side">
+      <img src="{% static 'Library web/login-op.jpg' %}" alt="Book" />
+      <div class="quote">“A reader lives a thousand lives before he dies”</div>
+    </div>
+
+    <div class="right-side">
+      <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        
+        <!-- Display Messages -->
+        {% if messages %}
+        <div class="messages">
+          {% for message in messages %}
+          <p class="message {{ message.tags }}">{{ message }}</p>
+          {% endfor %}
+        </div>
+        {% endif %}
+        
+        <!-- Username Field -->
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter Your Username" required />
+        
+        <!-- Password Field -->
+        <label for="password">Password</label>
+        <div class="password-container">
+          <input type="password" id="password" name="password" placeholder="Enter Your Password" required />
+          <i class="fa-solid fa-eye-slash toggle-eye" data-target="password"></i>
+        </div>
+        
+        <!-- Signup Link -->
+        <div class="login-link">
+          Don't have an account? <a href="{% url 'sign-up' %}"> <u>Sign up</u></a>
+        </div>
+        
+        <!-- Submit Button -->
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Alert -->
+  {% if show_success_alert %}
+    <div id="custom-alert" class="custom-alert" data-redirect="{% if role == 'admin' %}{% url 'adminBooks' %}{% else %}{% url 'readerBooks' %}{% endif %}">
+      <div class="alert-content">
+        <p id="alert-message">Login successful!</p>
+        <button id="close-alert">OK</button>
+      </div>
+    </div>
+  {% endif %}
+
+  
+</body>
+</html>

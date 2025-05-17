@@ -1,0 +1,52 @@
+{% extends "readerBase.html" %}
+{% load static %}
+
+{% block title %}Available Books{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Styles/Reader_Landing_book.css' %}" />
+{% endblock extra_css %}
+
+{% block content %} 
+    <br />
+    <br />
+
+    <h1>Welcome {{ user_name }} to ShelfMate</h1>
+    <main>
+        <div class="top-header">
+            <h2>Available Books</h2>
+            <div class="sort-dropdown">
+                <span class="material-symbols--sort" title="Sort"></span>
+                <div class="sort-menu" id="sortMenu">
+                    <button>New</button>
+                    <button>Old</button>
+                    <button>Available</button>
+                    <button>Unavailable</button>
+                </div>
+            </div>
+        </div>
+
+            <div class="book-row">
+                {% for x in books %}
+                <div class="book-container">
+                    <a href="{% url 'reader_book_details' x.id %}">
+                        <img src="{{ x.image.url }}" alt="{{ x.title }}"/>
+                    </a>
+                    <div class="book-description">
+                        <h2>
+                            <a href="{% url 'reader_book_details' x.id %}">{{ x.title }}</a>
+                            <span class="mynaui--book-check"></span>
+                        </h2>
+                        <a href="{% url 'reader_book_details' x.id %}"><p>{{ x.author }}</p></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+    </main>
+
+{% endblock content %}  
+
+{% block extra_scripts %}
+    <script src="{% static 'JavaScript/Reader_page.js' %}"></script>
+    
+{% endblock extra_scripts %}

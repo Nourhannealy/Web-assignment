@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign-Up</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'Library web/Favicon.png' %}">
+  <link rel="stylesheet" href="{% static 'Styles/Sign-up.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="left-side">
+      <img src="{% static 'Library web/Sign-Up.jpg' %}" alt="Book" />
+    </div>
+    <div class="right-side">
+      <h2>Create Account</h2>
+      
+      <form method="POST" action="{% url 'sign-up' %}">
+        {% csrf_token %}
+      
+        <label for="username">Username</label>
+        {% if errors.username %}
+          <p class="error-message">{{ errors.username }}</p>
+        {% endif %}
+
+        <input 
+          type="text" 
+          placeholder="Username" 
+          name="username" 
+          id="username"
+          value="{{ form_data.username|default_if_none:'' }}"
+        >
+      
+        <label for="email">Email</label>
+        {% if errors.email %}
+          <p class="error-message">{{ errors.email }}</p>
+        {% endif %}
+        <input 
+          type="email" 
+          placeholder="Email or Phone" 
+          name="email" 
+          id="email"
+          value="{{ form_data.email|default_if_none:'' }}"
+        >
+      
+        <label for="password1">Password</label>
+        {% if errors.password1 %}
+          <p class="error-message">{{ errors.password1 }}</p>
+        {% endif %}
+
+        <input 
+          type="password" 
+          placeholder="Password" 
+          id="password1" 
+          name="password1"
+        >
+      
+        <label for="password2">Confirm Password</label>
+        {% if errors.password2 %}
+          <p class="error-message">{{ errors.password2 }}</p>
+        {% endif %}
+
+        <input 
+          type="password" 
+          placeholder="Confirm Password" 
+          id="password2" 
+          name="password2"
+        >
+      
+        <label for="role">Role</label>
+        {% if errors.role %}
+          <p class="error-message">{{ errors.role }}</p>
+        {% endif %}
+
+        <select name="role" id="role" required>
+          <option value="" disabled {% if not form_data.role %}selected{% endif %}>Select Role</option>
+          <option value="reader" {% if form_data.role == "reader" %}selected{% endif %}>Reader</option>
+          <option value="admin" {% if form_data.role == "admin" %}selected{% endif %}>Admin</option>
+        </select>
+      
+        <button type="submit">Signup</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="custom-alert" class="custom-alert hidden">
+    <div class="alert-content">
+      <p id="alert-message"></p>
+      <button id="close-alert">OK</button>
+    </div>
+  </div>
+</body>
+</html>

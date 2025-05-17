@@ -1,0 +1,91 @@
+{% extends "readerBase.html" %}
+{% load static %}
+
+{% block title %}{{ book.title }}{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Styles/Reader_Book_Details.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<br><br>
+<section>
+    <div class="container">
+        <!--Book cover-->
+        <div class="book-cover">
+            <img src="{{ book.image.url }}" alt="{{ book.title }} book cover">
+        </div>
+
+        <div class="book-details">
+            <!-- Favorite toggle -->
+            <input type="checkbox" id="favoriteToggle" class="icon-toggle-checkbox" hidden
+    {% if book.relations.filter(user=request.user, favorite=True).exists %}checked{% endif %}
+    data-book-id="{{ book.id }}">
+
+
+            <label for="favoriteToggle" class="icon-toggle">
+                <div class="famicons--heart-outline"></div>
+                <div class="famicons--heart"></div>
+            </label>
+
+            <h1>{{ book.title }}</h1>
+            <p>
+                {% for category in book.categories.all %}
+                    <u>{{ category.name }}</u>{% if not forloop.last %} | {% endif %}
+                {% endfor %}
+            </p>
+
+            <div class="border-box">
+                <p><a href="https://www.google.com/search?q={{ book.author }}" id="Authorname">{{ book.author }}</a></p>
+                <p id="Author">Author</p>
+            </div>
+
+            <br>
+            <p>{{ book.chapters }} Chapters</p>
+            <br>
+            <p>{{ book.pages }} Pages</p>
+            <br>
+
+            <div class="availability">
+                {% if book.stock > 0 %}
+                    <span class="mynaui--book-check"></span>
+                    <span class="availability-text">Available</span>
+                {% else %}
+                    <span class="mynaui--book-x"></span>
+                    <span class="availability-text">Unavailable</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!--Description-->
+    <div class="book-description">
+        <h1>About Book</h1>
+        <div class="about-book">
+            <p>{{ book.description|linebreaks }}</p>
+        </div>
+
+        <div class="button-container">
+            <button class="button" onclick="showBorrowAlert({{ book.id }}, {{ book.stock }})" >Borrow</button>
+        </div>
+    </div>
+
+    <div id="customAlert" class="custom-alert" style="display: none;">
+        <div class="alert-box">
+            <p id="alertMessage">Are you sure?</p>
+            <div class="alert-buttons">
+                <button id="alertCancelBtn">Cancel</button>
+                <button id="alertConfirmBtn">OK</button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block extra_scripts %}
+<script>
+  const csrfToken = '{{ csrf_token }}';
+</script>
+<script src="{% static 'JavaScript/Reader_page.js' %}"></script>
+<script src="{% static 'JavaScript/Reader_book_details.js' %}"></script>
+{% endblock extra_scripts %}

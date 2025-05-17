@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}ShelfMate{% endblock %}</title> 
+    <link rel="icon" type="image/x-icon" href="{% static 'Library web/Favicon.png' %}" />
+    
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="{% static 'Styles/Side_Nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'Styles/Nav_Bar.css' %}" />
+    {% block extra_css %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'Styles/footer.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+
+    
+</head>
+
+<body>
+
+  <!-- Navigation bar -->
+  {% include "parts/AdminNavbar.html" %}
+
+  <!-- Sidebar -->
+  {% include "parts/AdminSidebar.html" %}
+
+  <!-- Main content -->
+  {% block content %}
+  {% endblock %}
+  
+  <!-- Footer -->
+  {% include "parts/footer.html" %}
+
+
+  {% block extra_scripts %}
+   <script src="{% static 'JavaScript/Admin_page.js' %}"></script>
+  {% endblock %}
+</body>
+</html>
